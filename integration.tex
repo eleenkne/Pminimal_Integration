@@ -23,8 +23,9 @@ and $f:Y\subseteq S\times \ZZ^r\to \AA_{q_K}$ a function which is Presburger-con
 \end{def-lem}
 We are now ready to state and prove our main theorem:
 \begin{thm}
-Assume that for every $s \in S$, the function $f: S\times K^m \to \QQ$ is constructible in a relatively P-minimal structure. If $\int f(s,x)|dx|$ is finite for all $s \in S$, then there exists a constructible function $g: S \to \QQ$, such that
-\[g(s) = \int_{X_s} f(s,x)|dx|.\]
+Let $(K, \Z, \Lm_2)$ be a relatively $P$-minimal structure, $S$ an $\Lm_2$-definable set and $f: X \subseteq S\times K^m \to \AA_{q_K}$ a constructible function.  There exists a constructible function $g: S \to \AA_{q_K}$, such that
+\[g(s) = \int_{X_s} f(s,x)|dx|,\]
+whenever $s \in \text{Int}(f,S)$.
 \end{thm}
 \begin{proof}
 Since the result for general $m$ can be obtained by iteration, we may assume that $m =1$. A general constructible function has the form
