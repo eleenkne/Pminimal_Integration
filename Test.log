@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 14:45
-=======
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 14:34
->>>>>>> Wijzig-hoofdstuk-1
-=======
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 14:38
->>>>>>> Wijzig-hoofdstuk-2
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 14:52
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -283,15 +275,7 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/t
 exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008
 /texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb>
-<<<<<<< HEAD
-<<<<<<< HEAD
-Output written on Test.pdf (1 page, 23322 bytes).
-=======
-Output written on Test.pdf (1 page, 23762 bytes).
->>>>>>> Wijzig-hoofdstuk-1
-=======
-Output written on Test.pdf (1 page, 23763 bytes).
->>>>>>> Wijzig-hoofdstuk-2
+Output written on Test.pdf (1 page, 23860 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
