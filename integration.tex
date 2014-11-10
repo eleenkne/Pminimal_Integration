@@ -58,10 +58,11 @@ then the partition of $\text{GR}(f)$ will consist of cells of the form
 \right\}\right.,\]
 for some $(\square, k, N, M, \xi) \in P_K$.
 
-%VANAF HIER HERWERKEN
-This partitioning can now be used to compute the given integral. Let $\mu$ denote the usual Haar measure (i.e., normalized such that $\mu(R_K) =1$. ) We get the following:
+This partitioning can now be used to compute the given integral. Let $\mu$ denote the usual Haar measure (i.e., normalized such that $\mu(cO_K) =1$. ) We get the following:
 \begin{eqnarray*}
- \int_{X_s} {f(s,x)}|dx| &=& \sum_\gamma \left[\left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right)\cdot \mu(\{x\in X_s \mid \bigwedge_{ij} f_{ij}(s,x) = \gamma_{ij}\}\right]\\ 
+ \int_{X_s} {f(s,x)}|dx|
+ &=& \sum_{\delta \in \text{Im}(f_s)} \delta \cdot \mu\{x\in X_s \mid f_s(x) = \delta\}\\
+ &=& \sum_\gamma  \left[\left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right)\cdot \mu(\{x\in X_s \mid \bigwedge_{ij} f_{ij}(s,x) = \gamma_{ij}\}\right]\\ 
  &=& \sum_{\{A \mid s \in \tilde{S}_A\}} \left[ \sum_{\gamma \in B_s} \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot \mu(A_{s,\gamma})\right].
 \end{eqnarray*}
 Let us now compute the measure of a fiber $A_{s,\gamma}$. %We will extend the notation $\langle \ldots\rangle_{i}$ introduced above, and write $\langle D\rangle_{i}$ for the projection of the elements of $D$ onto their first $i$ co\"ordinates.  For each $\langle x\rangle_{i-1} \in \langle A_{s,\gamma}\rangle_{i-1}$, write 
@@ -79,14 +80,14 @@ We get
 \mu(A_{s,\gamma}) &=& \int_{A_{s,\gamma}}|dx|\\
 &=& \int_{\hat{A}_{s,\gamma}}|du|
 \\
-&=&q_K^{-(k+M)}\sum_{\tau \in T} (q_K^{-N})^\tau,
+&=& \sum_{\tau \in T}\mu(\xi \pi^{k + \tau N} (1 + \pi^{M}\cO_K)),\\
+&=&|\xi|q_K^{-(k+M)}\sum_{\tau \in T} (q_K^{-N})^\tau,
 \end{eqnarray*}
 where $T$ is the set $T:=\{\tau \in \Gamma_K \mid \alpha(s,\gamma ) \ \Box_{1}\ k + \tau N\ \square_{2}\ \beta(s,\gamma)\}$.
 Because of our assumptions, the set $A_{s,\gamma}$ must have finite measure, which is only possible if $\square_{1}$ denotes $<$.
-{\color{red}
-(Note: this is a property of the cell $A$, making it a definable condition)
-} 
-
+(This is a property of the cell $A$, making it a definable condition)
+ \\
+VANAF HIER HERWERKEN\\
 We get the following results for this sum. 
 %If possible, we will suppress the variables and just write $\alpha_m, \beta_m, \ldots$ to keep things readable. 
 Put $\tilde{\alpha}:= \lfloor\frac{\alpha -k}{N}\rfloor+1$, and $\tilde{\beta}:= \lceil\frac{\beta -k}{N}\rceil-1$ (clearly these are still $\Lm_2$-definable functions). 
