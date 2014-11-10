@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 11:25
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  10 NOV 2014 15:28
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -149,7 +149,8 @@ Package: mdwlist 1996/05/02 1.1 Various list-related things
 (/usr/local/texlive/2008/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (./nov.aux)
+) (./nov.aux (./introduction.aux) (./preparation.aux) (./integration.aux)
+(./rationality.aux) (./wellordered.aux))
 \openout1 = `nov.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
@@ -165,7 +166,8 @@ LaTeX Font Info:    ... okay on input line 247.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 247.
 LaTeX Font Info:    ... okay on input line 247.
 LaTeX Font Info:    Try loading font information for U+msa on input line 247.
- (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 247.
@@ -194,79 +196,19 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout2 = `introduction.aux'.
 
 
-(./introduction.tex
+(./introduction.tex [2
 
-LaTeX Warning: Citation `denef-2000' on page 2 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Clu-2003' on page 2 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Clu-Gor-Hal-14' on page 2 undefined on input line 5.
-
-
-LaTeX Warning: Citation `CLip' on page 2 undefined on input line 33.
-
-
-LaTeX Warning: Citation `mou-09' on page 2 undefined on input line 33.
-
-
-LaTeX Warning: Citation `Clu-Gor-Hal-14' on page 2 undefined on input line 38.
-
-[2
-
-]
-
-LaTeX Warning: Citation `denef-84' on page 3 undefined on input line 41.
-
-
-LaTeX Warning: Citation `denef-vdd-88' on page 3 undefined on input line 41.
-
-[3]
-
-LaTeX Warning: Citation `has-mac-97' on page 4 undefined on input line 108.
-
-
-LaTeX Warning: Citation `clu-presb03' on page 4 undefined on input line 110.
-
-[4]) [5]
+] [3] [4]) [5]
 \openout2 = `preparation.aux'.
 
- (./preparation.tex
-
-LaTeX Warning: Citation `Clu-Gor-Hal-14' on page 6 undefined on input line 6.
-
-
-LaTeX Warning: Citation `vdd-84' on page 6 undefined on input line 24.
-
-
-LaTeX Warning: Reference `lem.semialgfnc' on page 6 undefined on input line 37.
-
-
-
-LaTeX Warning: Reference `prop.celldecomp' on page 6 undefined on input line 37
-.
-
-[6
+ (./preparation.tex [6
 
 
 ]
-
-LaTeX Warning: Reference `cell1' on page 7 undefined on input line 49.
-
 
 LaTeX Warning: Reference `eq:1' on page 7 undefined on input line 52.
 
-
-LaTeX Warning: Reference `preparation' on page 7 undefined on input line 76.
-
 [7]
-
-LaTeX Warning: Reference `WN' on page 8 undefined on input line 94.
-
-
-LaTeX Warning: Reference `preswellorder' on page 8 undefined on input line 97.
-
 
 LaTeX Warning: Reference `eq:1' on page 8 undefined on input line 109.
 
@@ -276,65 +218,26 @@ Overfull \hbox (8.56487pt too wide) detected at line 125
 cmsy/m/n/10 8\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K [] :
  []
 
-
-LaTeX Warning: Citation `clu-presb03' on page 9 undefined on input line 145.
-
-[9]
-
-LaTeX Warning: Reference `thm:semialgpres' on page 10 undefined on input line 1
-52.
-
-
-LaTeX Warning: Reference `thm:partialprep' on page 10 undefined on input line 1
-56.
-
-) [10]
+[9]) [10]
 \openout2 = `integration.aux'.
 
  (./integration.tex
 
-LaTeX Warning: Citation `Clu-Gor-Hal-14' on page 11 undefined on input line 3.
-
-
-LaTeX Warning: Reference `thm:partialcd1' on page 11 undefined on input line 30
+LaTeX Warning: Reference `thm:partialcd1' on page 11 undefined on input line 31
 .
-
-
-LaTeX Warning: Reference `prop:partialcd2' on page 11 undefined on input line 3
-0.
 
 [11
 
 
 ]
-Overfull \hbox (16.66594pt too wide) in alignment at lines 57--60
+Overfull \hbox (16.66594pt too wide) in alignment at lines 58--61
  [][][] []
  []
 
-[12]
-
-LaTeX Warning: Reference `prop:partialcd2' on page 13 undefined on input line 9
-5.
-
-
-LaTeX Warning: Reference `lemma:presburgerloci' on page 13 undefined on input l
-ine 103.
-
-
-LaTeX Warning: Citation `clu-loe-08' on page 13 undefined on input line 104.
-
-) [13]
+[12]) [13]
 \openout2 = `rationality.aux'.
 
  (./rationality.tex
-
-LaTeX Warning: Reference `thm:rationality' on page 14 undefined on input line 3
-.
-
-
-LaTeX Warning: Reference `thm1' on page 14 undefined on input line 14.
-
-
 Underfull \vbox (badness 1320) has occurred while \output is active []
 
  [14
@@ -345,11 +248,6 @@ Underfull \vbox (badness 1320) has occurred while \output is active []
 \openout2 = `wellordered.aux'.
 
  (./wellordered.tex
-
-LaTeX Warning: Reference `lem.cartesian' on page 16 undefined on input line 31.
-
-
-
 Overfull \hbox (6.53198pt too wide) in paragraph at lines 34--35
 []\T1/cmr/bx/n/10.95 Proposition A.3. []\T1/cmr/m/it/10.95 An de-fin-ably well-
 ordered struc-ture $\OML/cmm/m/it/10.95 M$ \T1/cmr/m/it/10.95 has de-fin-able c
@@ -359,32 +257,22 @@ hoice.
 [16
 
 
-]
+]) [17] (./nov.bbl) [18
 
-LaTeX Warning: Reference `lem.elem' on page 17 undefined on input line 74.
-
-
-LaTeX Warning: Citation `clu-presb03' on page 17 undefined on input line 77.
-
-) [17] (./nov.bbl) [18
-
-] (./nov.aux (./introduction.aux) (./preparation.aux)
-(./integration.aux) (./rationality.aux) (./wellordered.aux))
+] (./nov.aux (./introduction.aux) (./preparation.aux) (./integration.aux) (./ra
+tionality.aux) (./wellordered.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2711 strings out of 493876
- 29537 string characters out of 1150567
- 85218 words of memory out of 3000000
- 5775 multiletter control sequences out of 10000+50000
- 25200 words of font info for 70 fonts, out of 3000000 for 5000
+ 2724 strings out of 493876
+ 29748 string characters out of 1150567
+ 86781 words of memory out of 3000000
+ 5779 multiletter control sequences out of 10000+50000
+ 24424 words of font info for 69 fonts, out of 3000000 for 5000
  875 hyphenation exceptions out of 8191
- 34i,14n,33p,1150b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,33p,1150b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/loc
 al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texliv
@@ -405,20 +293,19 @@ al/texlive/2008/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/local/texli
 ve/2008/texmf-dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2008/t
 exmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2008/tex
 mf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2008/texmf
--dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2008/texmf-d
-ist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/public/cm-super/sfcc0900.pfb></usr/local/texlive/2008/texmf-dist/
-fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2008/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2008/texmf-dist/font
-s/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
-1/public/cm-super/sfti0800.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
-public/cm-super/sfti0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti1095.pfb>
-Output written on nov.pdf (18 pages, 437990 bytes).
+-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/public/cm-super/sfcc0900.pfb></usr/local/texlive/2008/texmf-dis
+t/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2008/texmf-dist/
+fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2008/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2008/texmf-dist/font
+s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
+pe1/public/cm-super/sfti0800.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
+1/public/cm-super/sfti0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
+public/cm-super/sfti1095.pfb>
+Output written on nov.pdf (18 pages, 427149 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
