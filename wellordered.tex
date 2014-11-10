@@ -1,0 +1,81 @@
+% !TEX root = nov.tex
+\section{Definably well-ordered structures}\label{appendix}
+
+\begin{defn}
+An $L$-structure $M$ is said to be\emph{definably well-ordered} if there is an definable linear order $\lhd$ on $M$ such that any definable subset of $M$ has a $\lhd$-minimal element. 
+\end{defn}
+
+\begin{lem}\label{lem.elem} Suppose that $M$ is a definably well-ordered $L$-structure and let $\lhd$ be defined by an $L(a)$-formula. Then for every $L(a)$-structure $N$, if $N\equiv_a M$ then $N$ is definably well-orderable. 
+\end{lem}
+
+\begin{proof}
+Let $\phi(x,y)$ be an $L(a)$-formula with $length(x)=1$. By definition 
+\[M\models \forall y (\exists x (\phi(x,y))\to \exists x (\phi(x,y)\wedge \forall z (\phi(z,y)\to x\unlhd z))).
+\]
+Since $N\equiv_a M$, this implies that every definable subset of $N$ has a $\lhd$-minimal element.
+\end{proof}
+
+The previous lemma shows that being a definably well-ordered structure is a property of $Th(M,a)$, where $a$ is a tuple of parameters used in a formula defining a linear order such that any definable subset of $M$ has a minimal element. We say that a theory $T$ is definably well-orderable if it has some definably well-ordered model where the linear order is 0-definable. The following lemma shows the relation with cartesian powers:  
+
+\begin{lem}\label{lem.cartesian} The following are equivalent:
+\begin{enumerate}
+	\item $M$ is definably well-ordered; 
+	\item there is an $L(M)$-definable linear order $\lhd$ on $M^n$ such that any definable subset of $M^n$ has a $\lhd$-minimal element.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+That (1) implies (2) follows by putting the lexicographic on $M^n$ induced by the definable linear order on $M$. For the converse, suppose that $n>1$ and pick any $a\in M^{n-1}$. Let $\phi(x,y)$ be a formula defining $x\lhd y$. Then $\phi(x_1,a;y_1,a)$ defines a well-order on $M$.  
+\end{proof}
+
+In light of \ref{lem.cartesian}, given a definably well-ordered structure $M$ we denote by $\lhd$ a fixed definable linear-order on $M$ such that definable sets in any cartesian power of $M$ have $\lhd$-minimal elements. For a theory to have models which are definably well ordered is a very strong property. As an example we show that such theories have definable choice and thus, they eliminate imaginaries. 
+
+\begin{prop}
+An definably well-ordered structure $M$ has definable choice. 
+\end{prop}
+
+\begin{proof}
+Let $X\subseteq M^{m+n}$ be a definable set. Define $f:\Pi_m(X)\rightarrow M^n$ to be the function sending $x$ to the $\lhd$-least element in $X_x$. Clearly, if $X_x=X_y$ then $f(x)=f(y)$. 
+\end{proof}
+
+\begin{cor}
+A definably well-ordered structure $M$ has definable Skolem functions. 
+\end{cor}
+
+\begin{cor}
+A definably well-ordered structure $M$ has uniform elimination of imaginaries. 
+\end{cor}
+
+Notice that being a definably well-ordered structure is stronger than to have definable choice. For instance the real field has definable choice but by a result of Ramakrishnan every definable order embeds in $(\RR^n,<_{\text{lex}})$. Therefore, no definable linear order has minimal elements for all definable subsets of the real line. Using this one can show that no reduct the real field is definably well orderable. 
+
+\
+
+Though definably well-ordered structures have strong model-theoretic properties, they are not always model-theoretically tame. For instance, the theory of arithmetic is definably well-orderable and yet model-theoretically wild. The main example of a tame well-orderable theory is Presburger Arithmetic. This is the content of the following proposition: 
+
+\begin{prop}\label{preswellorder}
+Presburger arithmetic is definably well-orderable, that is, $Th(\ZZ,+,-,0,1,\leq,(\equiv_n)_{n\in \mathbb{N}})$ is well-orderable.
+\end{prop}
+
+\begin{proof}
+Consider the following definable order
+
+\[x\lhd y \Leftrightarrow 
+\begin{cases}
+0\leq x<y \\
+0\leq x<-y \\
+0\leq -x<y\\
+0\leq -x<-y \\
+\end{cases}
+\]
+
+On $\ZZ$ this actually defines the following well-order: 
+$$0 \lhd 1 \lhd -1 \lhd 2 \lhd -2 \lhd \cdots  .$$
+
+In light of lemma \ref{lem.elem}, this completes the proof. 
+\end{proof}
+
+Notice that the linear ordering defined in the previous proposition does not define in general a well-order on a $\ZZ$-group $G$, but it does define a linear order such that for any definable subset $A\subseteq G$, $A$ has a $\lhd$-minimal element. As a corollary we get a result from \cite{clu-presb03} 
+
+\begin{cor}
+Presburger arithmetic has elimination of imaginaries. 
+\end{cor}

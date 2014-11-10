@@ -1,0 +1,35 @@
+% !TEX root = nov.tex
+\section{Rationality}
+In this section we will give a proof of Theorem \ref{thm:rationality}, which we restate here {\color{red} This version is more specific!!} for the convenience of the reader.
+\begin{thm*}
+Suppose that $(K,\cL)$ is relatively P-minimal. Let $X$ be a $\cL_2$-definable subset of $\cO_K^n\times \NN$, and let $a_n$ be the Haar measure of $X_n:=\{x\in \cO_K^n\mid (x,n)\in X\}$ for each $n\geq 0$. Then the series $\sum_{i\geq 0} a_i T^i$ is a rational function of the form
+\[\sum_{i\geq 0} a_i T^i = \frac{Q(T) }{(1-T^N)^k},\]
+where $k, N \in \N$ and  $Q(T) \in \AA_{q_K}[T]$. 
+\end{thm*}
+\begin{proof}
+Let $\alpha$ denote the projection map $\alpha:X\to \NN: (x,n) \mapsto n$, and consider the integral
+\[I(\sigma):= \int_X|\alpha|^\sigma|dn||dx|,\]
+where $\sigma \in \RR$, with $\sigma>0$. Note that  $I(\sigma) =\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|$, and hence we need to show that $I(\sigma)$ is rational in $q_K^{-\sigma}$.
+
+Applying Theorem \ref{thm1}, one can find a constructible function $g: \NN \to \AA_{q_K}$, such that
+\[g(n) = \int_{X_n}|dx|.\]
+This function must have the form 
+\[g(n) = \sum_{i=1}^r a_iq_K^{\alpha_i(n)}\prod_j\beta_{ij}(n),\]
+where $a_i \in \AA_{q_K}$, and the functions $\alpha_i$ and $\beta_{ij}$ are Presburger-definable functions $\NN \to \ZZ$. By the Preparation theorem for Presburger functions, we can partition $\N$ in $\Gamma$-cells $C_i \subseteq \N$ of the form
+\[C_i = \{ n \in \N \mid A_i \ \square_1 \ n \ \square_2 B_i \ \wedge n \equiv k_i \mod N \}\]
+ such that on each part $g_i:= g_{|C_i}$ has the form 
+\[g_i(n) = \sum_{j=1}^r a_{ij}'q_K^{m_{ij}(\frac{n-k_i}{N})}P\left(\frac{n-k_i}{N}\right),\]
+where $P(t)$ is in $\Z[t]$, $m_{ij} \in \N$ and $a_{ij}' \in \AA_{q_K}$. Using this, we get that
+\begin{eqnarray*}
+I(\sigma) &=& \sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|\\
+&=& \sum_{ C_i}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
+&=&\sum_{C_i'}(q_K^{-\sigma})^{k_i} \sum_{n' \in C_i'}\sum_{j=1}^r a_{ij}'q_K^{(-N\sigma +m_{ij})n'}P(n'),
+\end{eqnarray*}
+where $C_i'$ is the set $\{n'\in \N \mid A_i'\ \square_1 \ n' \ \square_2 \ B_i'\}$. This sum can be computed, using the fact that for all $a \in \N$ and $P(t) \in \Z[t]$ of degree $d$, the following holds in $\Z[[t]]$:
+\[\sum_{n \geqslant a} P(n)t^n =\sum_{i=0}^d	\frac{[\Delta^iP(a)]t^{a+i}}{(1 - t )^{i+1}}.\]
+Here $\Delta^i$ is the $i$-th iterate of the difference operator $\Delta:P \mapsto P(X + 1) - P(X)$ with the convention $\Delta^0P = P$.
+
+{\color{red} This is an equality for formal power series. But the computation includes sums $\sum (q_K^{m_{ij}})^{n'}P(n')$, and these need to be convergent, so we need that $m_ij <0$. Can this be deduced from the fact that $g_i(n)<1$ (since it represents the measure of a subset of $\mathcal{O}_K^n$)??? }
+ 
+In particular, it is clear that $I(\sigma)$ is rational in $T:=q_K^{-\sigma}$. The specific form of the fraction follows easily from the calculation.
+\end{proof}

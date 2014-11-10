@@ -1,0 +1,170 @@
+% !TEX root = nov.tex
+\section{A preparation theorem for relative P-minimality}
+
+The following is a version of the well-known cell decomposition for semi-algebraic sets. 
+
+\begin{prop}[Semi-algebraic cell decomposition, Theorem 3.3.2 in \cite{Clu-Gor-Hal-14}]\label{prop.celldecomp}
+Let $X \subseteq  S \times K$ and $f_j:X \to\Gamma_K $ be $L_{ring,2}$-definable functions for $j=1,\ldots,r$. Then there exists a finite partition of $X$ into $p$-adic cells $C_i$ 
+\[C_i = \left\{(s,t) \in D\times K \ \left| \ \begin{array}{l} \alpha_i(s) \square_1 \ \ord(t-c_i(s)) \ \square_2 \ \beta_i(s),\\ \ord(t-c_i(s)) \equiv k_i\mod n_i,\\ \ac_{m_i}(t-c_i(s)) = \xi_i \end{array} \right\}\right.,\]
+such that for each occurring cell $C_i$ one has that for each $(s,t)\in C_i$
+\[f_j(s,t)=  h_{ij}(s)+ a_{ij}\frac{\ord(t- c_i(s))- k_i}{n_i},
+\]
+for $a_{ij}$ integers and $h_{ij}: D\to \Gamma_K$ $L_{ring,2}$-definable functions for $j=1,\ldots,r$. 
+\end{prop}
+
+An analogous statement is true where semi-algebraic is replaced by sub-analytic. Notice that in these two cases all $K$-cells have definable centers. 
+
+\begin{lem}\label{lem.semialgfnc}
+Let $f: X \subseteq K \to \Gamma_K$ be an $\Lm_2$-definable function. Then, there exists an $\cL_{Ring,2}$-definable function {$h: X\to K$} such that \[f(x) = \ord h(x)\] for all $x \in X$. 
+\end{lem}
+\begin{proof}
+
+It follows from our assumptions that $\mathrm{Graph}(f)$ is an $\Lm_{\text{ring}, 2}$-definable subset of $K \times \Gamma_K$. Now consider the related set
+\[ G(f) := \{(x,y) \in K^2 \mid (x, \ord y) \in \mathrm{Graph}(f)\}.\]
+Clearly, G(f) is semi-algebraic, that is, $\cL_{ring}$-definable. Since the structure of semi-algebraic sets admits definable Skolem functions by a result of van den Dries \cite{vdd-84}, one can find an $\Lring$-definable function $h: \Pi_x(G(f)) \to K$, such that $(x, h(x)) \in G(f)$. 
+\end{proof}
+
+\begin{thm}[Preparation theorem for relative P-minimality] 
+\label{thm:partialprep} 
+Let $X \subseteq S \times K$ and $f:X\rightarrow \Gamma_k$ be an $\Lm_2$-definable function. There exists a finite decomposition of $X$ into cells $C$ 
+\[C = \left\{(s,t) \in D\times K \ \left| \ \begin{array}{l} \alpha(s) \square_1 \ \ord(t-c(s)) \ \square_2 \ \beta(s),\\ \ord(t-c(s)) \equiv k\mod n,\\ \ac_{m}(t-c(s)) = \xi \end{array} \right\}\right..\]
+On each such cell $C$, there is a $\Lm_2$-definable function $\gamma:D\to\Gamma_K$ and an integer $a\in \ZZ$ such that for all $(s,t) \in C$, 
+\[f(s,t) = \gamma(s) + a\frac{\ord(t-c(s))-k}{n}.\]
+We stress that the functions $c: S\to K$ are NOT necessarily $\Lm_2$-definable.
+\end{thm}
+\begin{proof}
+
+Fix a parameter $s \in \Pi_S(X)$. By Lemma \ref{lem.semialgfnc} there is a $\Lring$-definable function {$h_s: X_s\to K$} such that $f_s(t) = \ord h_s(t)$ for all $t \in X_s$ (we do not assume that $h_s$ is uniformly definable for all $s\in \Pi_S(X)$). By Proposition \ref{prop.celldecomp}, there exists a finite partition of $X_s$ into cells of the form 
+\begin{equation}\label{cell1}
+C_s = \left\{t \in K \ \left| \ \begin{array}{l} \alpha_s \square_1 \ \ord(t-c(s)) \ \square_2 \ \beta_s,\\ \ord(t-c_s) \equiv k_s\mod n_s,\\ \ac_{m_s}(t-c_s) = \xi_{m_s,s} \end{array} \right\}\right.,
+\end{equation}
+where $\alpha_s, \beta_s \in \Gamma_k, c_s \in K$, $(\square,k_s, n_s, m_s,\xi_{m_s,s})\in P_K$ and on each cell $C_s$ 
+\begin{equation}\label{preparation}
+f_s(t)=\ord h_s(t) =\gamma_s + a_s\frac{\ord(t-c_s)-k_s}{n_s},
+\end{equation}
+for some $a_s\in \ZZ$ and $\gamma_s\in \Gamma_K$.
+
+\
+
+Given a cell $C_s$ as in \ref{cell1}, the tuple $(\square,k_s,n_s,m_s,\xi_{m_s,s})$ is called the \emph{type} of the cell. Notice that for $s\in S$, the decomposition of $X_s$ might contain different cells of the same type. 
+
+\begin{claim} 
+There is a natural number $N\geq 1$ such that for every $s\in S$, there is a cell decomposition of $X_s$ such that each cell satisfies \ref{eq:1}, $n_s,m_s,|a_s|<N$ and moreover there occur at most $N$ cells of the same type.
+\end{claim}
+
+\begin{proof}[Proof of the claim:]
+
+The claim will follow by a standard compactness argument. For a positive integer $N$, let 
+\begin{align}\label{defPK}
+\begin{split}
+P_{K,N}&:= \{(\square, k,n,m,\xi)\in P_K \mid n<N, m<N\}\\
+E_{K,N} &:= \bigsqcup_{i=1}^N P_{K,N},
+\end{split}
+\end{align}
+the disjoint union of $N$ copies of $P_{K,N}$. Notice that $E_{K,N}$ is a finite set. For $\delta=(\square, k,n,m,\xi)\in P_{K,N}$ we let $k_{\delta}:=k$, $n_\delta:=n$, and so forth. Given $J\subseteq E_{K,N}$, $\{\delta_1,\ldots,\delta_{|J|}\}$ a fixed enumeration of $J$, $y\in K^{|J|}$ and $\alpha=(\alpha_1,\alpha_2)\in \Gamma_K^{2|J|}$, we put 
+\[C_J(y,\alpha)=\bigcup_{i=1}^{|J|} C_{\delta_i}(K,y_i,\alpha_{1i},\alpha_{2i}).
+\]
+Fix $J\subseteq E_{K,N}$ and $\{\delta_1,\ldots,\delta_{|J|}\}$ an enumeration of $J$, and let $a\in\ZZ^{|J|}$ be such that such that $|a_i|<N$ for all $1\leq i\leq |J|$. Let $t,x,y$ be variables of type $K$, $t$ of length 1, $x$ of the same length as elements in $S$ and $y$ of length $|J|$. Let $\alpha=(\alpha_1,\alpha_2,\alpha_3)$ be variables of type $\Gamma_K$, all $\alpha_1,\alpha_2$ and $\alpha_3$ of length $|J|$. We define the formula $\phi_{J,a}(x,y,\alpha)$
+by
+
+\small
+\begin{equation}\label{cellformula}
+\left(\begin{array}{l}
+X_x=C_J(y,(\alpha_1,\alpha_2))\ \wedge \\
+\displaystyle\bigwedge_{1\leq i\leq |J|} \forall t \left( C_{\delta_i}(t,y_i,\alpha_{1i},\alpha_{2i})\to \left(f_x(t)=\alpha_{3i}+a_i\frac{\ord(t-y_i))-k_{\delta_i}}{n_{\delta_i}}\right)\right)\end{array}\right).\\
+\end{equation}
+Roughly, this formula states that the set $X_x$ can be decomposed into finitely many cells satifying condition \ref{preparation}. Define the set $W_N$ by 
+\begin{equation}\label{WN}
+W_N:=\{(J,a): J\subseteq E_{K,N}, a\in \ZZ^{|J|}, |a_i|<N \text{ for all } 1\leq i\leq |J|\},
+\end{equation}
+and consider the set of formulas 
+\[\Sigma(x):=\left\{ \bigwedge_{(J,a)\in W_N} \neg (\exists y\in K^{|J|}\exists \alpha\in \Gamma_{K}^{3|J|}\phi_{J,a}(x,y,\alpha)) \mid N\in\mathbb{N}^*\right\}.
+\]
+
+By cell decomposition, $\Sigma(x)$ is inconsistent. Thus, by compactness, there exists a finite subset $\Sigma_0(x)$ which is inconsistent. Note that for every finite subset $\Sigma_0(x)\subseteq\Sigma(x)$, one can find a positive integer $N$ such that 
+\[\bigwedge_{(J,a)\in W_N} \neg (\exists y\in K^{|J|}\exists \alpha\in \Gamma_{K}^{3|J|}\phi_{J,a}(x,y,\alpha)) \models \Sigma_0(x).
+\end{equation*}
+
+This implies that there must exist $N>0$ such that for every $s\in \Pi_S(X)$  
+\[(K,\Gamma_K)\models \bigvee_{(J,a)\in W_N} \exists y\in K^{|J|}\exists \alpha\in \Gamma_{K}^{3|J|}\phi_{J,a}(s,y,\alpha)) 
+\]
+which is exactly what we wanted. 
+\end{proof}
+
+Let $N$ be given by the claim and $W_N$ as defined in \ref{WN}. Since $W_N$ is finite, one can put a total ordering $\lessdot$ on it. We will also put an alternative ordering $\lhd$ on the value group $\Gamma_K$ defined by :
+\[x \lhd y \Leftrightarrow
+(0 \leqslant x <y) \vee (0< x \leqslant -y) \vee (0< -x < y) \vee (0< -x < -y).\]
+This produces a total ordering on $\Gamma_K$ which can be extended to $\Gamma_K^k$ lexicographically. We also denote this extension by $\lhd$. The important property of the order $\lhd$ is that every $\Lm_2$-definable set of $\Gamma_K$ has a $\lhd$-smallest element (for a proof of this, see the appendix, in particular \ref{preswellorder}).
+
+\
+
+Now consider the map \[\sigma: S \to W_N \times (\Gamma_K)^{\leq 3|W_N|}: s \mapsto (\sigma_1(s), \sigma_2(s)),\]where $\sigma_1, \sigma_2$ are defined as follows:
+\begin{itemize}
+\item put $\sigma_1(s)= (J,a)$, if $(J,a)$ is the $\lessdot$-smallest element of $W_N$ such that  
+$$(K,\Gamma_K)\models \exists y\in K^{|J|}\exists \alpha\in \Gamma_{K}^{3|J|}\phi_{J,a}(s,y,\alpha).$$
+The claim ensures the existence of at least one such $(J,a)$ in $W_N$.    
+\item let $\phi_2(s)$ be the $\lhd$-smallest tuple $\alpha\in \Gamma_K^{3|J|}$ such that 
+$$(K,\Gamma_K)\models \exists y\in K^{|J|}\phi_{\sigma_1(s)}(s,y,\alpha).$$
+\end{itemize}
+It is clear that the function $\sigma$ will be $\Lm_2$-definable, once we fix a representation for the finite index set $W_N$. From this information one can then reconstruct the cell decomposition for $X$ and the linear functions satisfying \ref{eq:1}, in the following way. Let $S_0:=\Pi_S(X)$ and for $\lambda\in \sigma_1(S_0)$ let $S_{\lambda}$ be the set $\{s \in S_0 \mid \sigma_1(s)=\lambda\}$. For $\lambda=(J,a)\in \sigma_1(S_0)$, $1\leq j\leq |J|$ and $i=1,2,3$ let $\alpha_{\lambda ji}: S_\lambda\to \Gamma_K$ be defined by 
+
+\[\sigma_2(s)=\left(
+\begin{array}{l}
+\alpha_{\lambda 11}(s),\ldots,\alpha_{\lambda j1}(s),\ldots, \alpha_{\lambda |J|1}(s),\\
+\alpha_{\lambda 12}(s),\ldots,\alpha_{\lambda j2}(s),\ldots, \alpha_{\lambda |J|2}(s),\\
+\alpha_{\lambda 13}(s),\ldots,\alpha_{\lambda j3}(s),\ldots, \alpha_{\lambda |J|3}(s),
+\end{array}\right).\] 
+
+This produces a finite partition of $X$ into cells
+
+\[X = \bigcup_{\lambda=(J,a)\in \sigma_1(S_0)}\bigcup_{1\leq j\leq |J|}\left( \prod_{s\in S_\lambda} \{s\}\times C_{\lambda}(K,c(s),\alpha_{\lambda 1j}(s),\alpha_{\lambda 2j}(s))\right)\\
+\]
+
+where $c:\Pi_S(X)\to K$  is a function (not necesarelly definable) picking the centers of such cells. In addition, for each $\lambda=(J,a)\in \sigma_1(S_0)$, each $1\leq j\leq |J|$, each $s\in S_\lambda$ and $\delta_j\in J$ ($1\leq j\leq|J|$) the following holds \small
+\[\exists y\in K\forall t\in K \left(C_{\delta_j}(t,y,\alpha_{\lambda 1j}(s),\alpha_{\lambda 2j}(s)) \rightarrow \left(f_s(t)=\alpha_{\lambda 3j}+a_j\frac{\ord(t-y)-k_{\delta_j}}{n_{\delta_j}}\right)\right).
+\]
+\normalsize
+We stress again that we make no claims about the definability of the centers. 
+\end{proof}
+
+
+
+
+Since we work in a two-sorted structure, we will also encounter cells where the leading variable is a $\Gamma_K$-variable. For this case we have the following cell decomposition result:
+
+\begin{prop}\label{prop:partialcd2}
+%Let $(K, \Gamma_K, \Lm_2)$ be a relatively P-minimal structure.
+%Let $S \subseteq K^m \times (\Gamma_K)^{m'}$, 
+Let $X \subseteq S \times \Gamma_K$ a definable set, and $f: X \to \Gamma_K$ a definable function.% with elements $(s,\gamma)$, where $s \in S$ and $\gamma \in \Gamma_K$.  
+There exists a finite decomposition of $X$ into $\Gamma_K$-cells $C$ of the form
+\[C = \left\{(x,\gamma) \in D \times \Gamma_K \ \left| \ \begin{array}{l}\alpha(x)\ \square_1 \ \gamma \ \square_2 \  \beta(x)\quad \text{and}\quad \gamma \equiv n_0 \mod n \end{array} \right\}\right.,\]
+where $D$ is an $\Lm_2$-definable subset of $S$, $\alpha, \beta: S \to \Gamma_K$ are definable functions, and $n_0,n \in \NN$. The partition can be taken such that on each part $C$, there exists a constant $a_{C} \in \ZZ$ and a definable function $\delta: D \to \Gamma_K$, such that for all $(x,\gamma) \in C$,
+\[f(x,\gamma) = a_C \left(\frac{\gamma -n_0}{n}\right) + \delta(x).\]
+ \end{prop}
+\begin{proof}
+The proof is similar to the proof of the previous theorem. By relative $P$-minimality, we know that for every $s \in \Pi_X(S)$, the fiber $X_s$ is a Presburger definable set. Cluckers \cite{clu-presb03} obtained a cell decomposition theorem for Presburger structures. Applying this to the sets $X_s$, yields that each
+ $X_s$ can be partitoned into a finite union of cells of the form
+\[C_s := \{ \gamma \in K \mid  \alpha_s\ \square_1 \ \gamma \ \square_2 \  \beta_s\quad \text{and}\quad \gamma \equiv n_0 \mod n_s\},\]
+where $\alpha_s, \beta_s \in \Gamma_K$ and $n_s \in \NN$ are constants depending on $s$. 
+
+Also note that for any $s \in \Pi_X(S)$, the graph of the function $f_s(\gamma):= f(s,\gamma)$ will be a presburger set, by the assumption of relative $P$-minimality. Indeed, $G_s:=\{(x,\gamma)\in K\times \Gamma_K: f_s(\ord(x))=\gamma)\}$ is $\Lm_{ring,2}$-definable by relative P-minimality. Therefore the set $G_s':=\{(x,y)\in K^2: (x,\ord(y))\in G_s\}$ is semi-algebraic. But 
+\[Graph(f_s)=\{(\ord(x),\ord(y))\in \Gamma^2: (x,y)\in G_s'\},\]
+which by Theorem \ref{thm:semialgpres} is Presburger definable. This means that each $f_s$ is a Presburger definable funtion, and hence  must be piecewise linear (with coefficients in $\QQ$). In particular, the above partition can be taken such that on each $C_s$, there exist constants $a_s \in \ZZ, \delta_s \in \gamma_K$ such that for all $\gamma \in C_s$, we have that
+\[f_s(\gamma) = a_s \left(\frac{\gamma -n_0}{n_s}\right) + \delta_s.\]
+
+Our claims follow then from a similar argument as the one presented in the proof of Theorem
+\ref{thm:partialprep}. Since no centers are required in this case, the cell decomposition we obtain is even fully definable.
+
+%We now claim that the number of cells needed to partition each set $X_s$ is bounded, i.e., 
+% there exist $L,N \in \NN$, such that the following holds. Let \[P:= \{0, \ldots, N-1\} \times \{\emptyset, <\}^{2} \times \{1, \ldots, L\}\] be a set consisting of tuples $( \lambda, \Box, i)$.
+% For every $s \in S$, one can find a subset $I$ of $P$, and corresponding tuples 
+% $(d_j)_{j\in I}$, where
+%  $ d_{j}:= (\alpha_{j}, \beta_{j}) \in \Gamma_K^{2}  ,$ 
+% such that $X_s$ can be partitioned as $X_s = \bigcup_{j\in I} C_j(d_j)$. DO WE NEED TO EXPLAIN NOTATION $C_j$?? 
+% 
+% This can be shown using essentially the same compactness argument as on page \pageref{proof of claim}. Once this is established, one can proceed further in the same way as in the proof of Theorem \ref{thm:partialcd1}, with the obvious difference that no centers are required here.
+% 
+% {\color{blue}
+% The function preparation can be achieved similarly as in the proof of Theorem \ref{thm:partialcd1}. In this case we start from the observation that whenever we fix an element $s$ of $S$, the graph of the function $f_s(\gamma):= f(s,\gamma)$ is a Presburger set, and hence $f_s$ must be Presburger definable, and hence be piecewise linear (with coefficients in $\QQ$). 
+% }
+\end{proof}

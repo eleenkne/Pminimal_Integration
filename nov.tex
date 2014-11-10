@@ -1,0 +1,276 @@
+\documentclass[11pt]{amsart}
+%\documentclass{amsart}
+\usepackage{amssymb, amsthm}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage[T1]{fontenc}
+%\usepackage[all]{xypic}
+%\usepackage{amsmath}
+\usepackage{color,mdwlist}
+%\usepackage{showkeys}
+%\usepackage{tikz}
+%\usepackage{amsrefs}
+
+%\usepackage{hyperref}
+
+% replaced \newcommand by \long\def to allow paragraph breaks inside.
+\long\def\comment#1{\marginpar{{\footnotesize\color{red} #1\par}}}
+\long\def\commentimmi#1{\marginpar{{\footnotesize\color{green} #1\par}}}
+\long\def\change#1{{\color{blue} #1}}
+\newcommand\green[1]{{\color{green} #1}}
+% Strike things out: (doesn't work well with line breaks)
+\newbox\removebox
+\newcommand\remove[1]{%
+\setbox\removebox=\ifmmode\hbox{$#1$}\else\hbox{#1}\fi%
+\leavevmode
+\rlap{\textcolor{blue}{\vrule height0.8ex depth-0.6ex width\wd\removebox}}%
+\box\removebox
+}
+\long\def\bigremove#1{%
+\par\setbox\removebox=\vbox{#1}%
+\vbox{%
+\vbox to0pt{\hbox{\tikz\draw[color=blue,thick] (0,0) -- (\wd\removebox,-\ht\removebox)  (\wd\removebox,0) -- (0,-\ht\removebox);}}
+\box\removebox
+}
+}
+
+\long\def\jc#1{{\color{green} #1}}
+
+
+\usepackage{mathrsfs} %for the \mathscr
+
+
+\newcommand{\Cexp}{\mathrm{C}^{\mathrm{exp}}}
+\newcommand{\ICexp}{\mathrm{IC}^{\mathrm{exp}}}
+\newcommand{\cCexp}{\cC^{\mathrm{exp}}}
+\newcommand{\cQexp}{\cQ^{\mathrm{exp}}}
+\newcommand{\IcCexp}{\mathrm{I}\cC^{\mathrm{exp}}}
+\newcommand{\AO}[1][]{\cA_{\cO#1}}
+\newcommand{\BO}[1][]{\cB_{\cO#1}}
+\newcommand{\CO}[1][]{\mathcal{C}_{\cO#1}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\Int}{\operatorname{Int}}
+\newcommand{\Bdd}{\operatorname{Bdd}}
+\newcommand{\Iva}{\operatorname{Iva}}
+\newcommand{\Lm}{\mathcal{L}}
+\newcommand{\Lring}{\Lm_{\text{ring}}}
+
+
+
+\def\RDefe{Q^{\rm exp}}
+
+
+\newcommand{\iso}{\mathrel{\overset{\sim}{\smash{\longrightarrow}\vrule height.3ex width0ex\relax}}}
+
+
+\def\deg{\operatorname{deg}}
+\def\ac{{\overline{\rm ac}}}
+\def\Supp{\operatorname{Supp}}
+\def\limind{\mathop{\oalign{lim\cr
+\hidewidth$\longrightarrow$\hidewidth\cr}}}
+\def\Lp{{{\mathbf L}_{\rm PR}}}
+\def\Eu{\operatorname{Eu}}
+\def\Var{\operatorname{Var}}
+\def\Def{\operatorname{Def}}
+\def\Cons{\operatorname{Cons}}
+\def\RDef{\operatorname{RDef}}
+\def\GDef{\operatorname{GDef}}
+\def\tame{\operatorname{tame}}
+\def\SA{\operatorname{SA}}
+\def\Leq{(\cL_{K})^{\mathrm{eq}}}
+\def\LPas{\cL_{\rm DP}}
+\def\LPre{\cL_{\rm DP,P}}
+\def\LPres{\cL_{\rm Pres}}
+\def\Ord{\operatorname{Ord}}
+\def\DefR{\operatorname{Def}_{R}}
+\def\GDefR{\operatorname{GDef}_{R}}
+\def\Kdim{\operatorname{Kdim}}
+\def\Pres{\operatorname{Pres}}
+\def\CMC{\operatorname{CMC}}
+\def\ICMC{\operatorname{ICMC}}
+\def\pre{\operatorname{pre}}
+\def\kvar{{K_0 (\operatorname{Var}_k)}}
+\def\VarR{\Var_{R}}
+\def\GL{\operatorname{GL}}
+\def\Gr{\operatorname{Gr}}
+\def\SL{\operatorname{SL}}
+\def\eff{\operatorname{eff}}
+\def\res{\operatorname{res}}
+\def\rv{\operatorname{rv}}
+\def\RV{\operatorname{RV}}
+
+\def\longhookrightarrow{\mathrel\lhook\joinrel\longrightarrow}
+\let\cal\mathcal
+\let\got\mathfrak
+\def\gP{{\got P}}
+\def\ccF{{\mathscr F}}
+\def\pp{{\mathbb p}}
+\def\11{{\mathbf 1}}
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\DD{{\mathbb D}}
+\def\EE{{\mathbb E}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\HH{{\mathbb H}}
+\def\II{{\mathbb I}}
+\def\JJ{{\mathbb J}}
+\def\KK{{\mathbb K}}
+\def\LL{{\mathbb L}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\N{{\NN}}
+\def\OO{{\mathbb O}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\Q{{\QQ}}
+\def\RR{{\mathbb R}}
+\def\R{{\RR}}
+\def\SS{{\mathbb S}}
+\def\TT{{\mathbb T}}
+\def\UU{{\mathbb U}}
+\def\VV{{\mathbb V}}
+\def\WW{{\mathbb W}}
+\def\XX{{\mathbb X}}
+\def\YY{{\mathbb Y}}
+\def\ZZ{{\mathbb Z}}
+\def\Z{{\ZZ}}
+
+\def\gM{{\mathfrak M}}
+\def\cA{{\mathcal A}}
+\def\cB{{\mathcal B}}
+\def\cC{{\mathscr C}}
+\def\cD{{\mathcal D}}
+\def\cE{{\mathcal E}}
+\def\cF{{\mathcal F}}
+\def\cG{{\mathcal G}}
+\def\cH{{\mathcal H}}
+\def\cI{{\mathcal I}}
+\def\cJ{{\mathcal J}}
+\def\cK{{\mathcal K}}
+\def\cL{{\mathcal L}}
+\def\cM{{\mathcal M}}
+\def\cN{{\mathcal N}}
+\def\cO{{\mathcal O}}
+\def\cP{{\mathcal P}}
+\def\cQ{{\mathcal Q}}
+\def\cR{{\mathcal R}}
+\def\cS{{\mathcal S}}
+\def\cT{{\mathcal T}}
+\def\cU{{\mathcal U}}
+\def\cV{{\mathcal V}}
+\def\cW{{\mathcal W}}
+\def\cX{{\mathcal X}}
+\def\cY{{\mathcal Y}}
+\def\cZ{{\mathcal Z}}
+\def\llp{\mathopen{(\!(}}
+\def\llb{\mathopen{[\![}}
+\def\rrp{\mathopen{)\!)}}
+\def\rrb{\mathopen{]\!]}}
+
+
+\newtheorem{thm}[subsection]{Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{lem}[subsection]{Lemma}
+\newtheorem{cor}[subsection]{Corollary}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{conj}[subsection]{Conjecture}
+\newtheorem{problem}[subsection]{Problem}
+\newtheorem{claim}[subsection]{Claim}
+\newtheorem{maintheorem}[subsection]{Main Theorem}
+
+
+\theoremstyle{definition}
+\newtheorem{defn}[subsubsection]{Definition}
+\newtheorem{example}[subsubsection]{Example}
+\newtheorem{xca}[subsubsection]{Exercise}
+\newtheorem{def-prop}[subsubsection]{Proposition-Definition}
+\newtheorem{def-theorem}[subsubsection]{Theorem-Definition}
+\newtheorem{def-lem}[subsubsection]{Lemma-Definition}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[subsubsection]{Remark}
+\newtheorem{remarks}[subsubsection]{Remarks}
+\newtheorem{remark - ques}[subsubsection]{Remark/Quesion}
+
+
+\theoremstyle{plain}
+
+
+\newcommand{\todo}[1]{\marginpar{{\scriptsize #1\par}}}
+
+\numberwithin{equation}{subsection}
+
+%\newcommand{\sur}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}  use \binom
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+
+\newenvironment{subcase}[1]%
+  {\par\medskip\noindent #1\par\begingroup%
+    \advance\leftskip by 1em\advance\rightskip by 1em}%
+  {\par\endgroup}
+
+\def\GM{{\GG_{\mathrm{m}}}}
+
+\DeclareMathOperator*{\lcm}{lcm}
+\DeclareMathOperator*{\Spec}{Spec}
+\DeclareMathOperator*{\Specf}{Spf}
+\DeclareMathOperator*{\Spf}{Spf}
+\DeclareMathOperator*{\sqc}{\sqcup}
+%\DeclareMathOperator*{\sq}{\square}
+\newcommand{\sq}{\mathrel{\square}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Jac}{\operatorname{Jac}}
+%Absolute value notation
+\newcommand{\abs}[1]{\lvert#1\rvert}
+
+%\newcommand{\statement}[1]{\begin{itemize}\item #1\end{itemize}}
+\newcommand{\statement}[1]{\\\hspace*{\fill}#1\hspace*{\fill}\\}
+
+
+%\newcommand{\GL}{\operatorname{GL}}
+
+
+%    Blank box placeholder for figures (to avoid requiring any
+%    partular graphics capabilities for printing this document).
+\newcommand{\blankbox}[2]{%
+  \parbox{\columnwidth}{\centering
+%    Set fboxsep to 0 so that the actual size of the box will match the
+%    given measurements more closely.
+    \setlength{\fboxsep}{0pt}%
+    \fbox{\raisebox{0pt}[#2]{\hspace{#1}}}%
+  }%
+}
+
+\parindent=0pt
+\begin{document}
+
+\setcounter{tocdepth}{1} % Show subsection in table of contents
+
+
+\title%[Transfer principles for integrability and boundedness]
+{Integration in P-minimal structures -- research program  }
+
+\begin{abstract}
+\end{abstract}
+
+%\thanks{The research leading to these results has received funding from the European Research Council under the European Community's Seventh Framework Programme (FP7/2007-2013) / ERC Grant Agreement nr. 246903 NMNAG}
+
+\maketitle
+
+%\tableofcontents
+
+\include{introduction}
+\include{preparation}
+\include{integration}
+\include{rationality}
+\appendix
+\include{wellordered}
+
+\bibliographystyle{amsplain}
+\bibliography{../Bibliografie}
+
+\end{document}
+
+
