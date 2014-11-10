@@ -30,13 +30,12 @@ whenever $s \in \text{Int}(f,S)$.
 \begin{proof}
 Since the result for general $m$ can be obtained by iteration, we may assume that $m =1$. A general constructible function has the form
 \[f(s,x) = \sum_{i=1}^r a_i q_K^{f_{i0}(s,x)} \prod_{j=1}^{r'}f_{ij}(s,x),\]
-where the $f_i, f_{ij}$ are definable functions $X \to \ZZ$ (where $\ZZ$ equals the value group $\Gamma_K$), and $a_i \in \ZZ\left[q, \frac1q, (\frac{1}{1-q^{-i}})_{i\in \NN\backslash\{0\}}\right].$
-
+where the $f_{ij}$ are definable functions $X \to \ZZ$, and $a_i \in \AA_{q_K}.$
 Now put $\gamma = (\gamma_{ij})_{i,j}$ and consider the set
 \[\text{GR}(f):= \{(s,\gamma, x)\in S\times \Gamma_K^{(r'+1)r}\times K \mid  \gamma_{ij} = f_{ij}(s,x)\},\]
-which is a permutated version of the combined graphs of the functions generating $f$. We will partition this set in cells, using the above cell decomposition results. It is easy to see that an iteration of Theorem \ref{thm:partialcd1} and Proposition \ref{prop:partialcd2} yields the following.
+which is a permutated version of the combined graphs of the functions generating $f$. We will partition this set in cells, using the cell decomposition results from the previous section. It is easy to see that an iteration of Theorem \ref{thm:partialprep} and Proposition \ref{prop:partialcd2} yields the following.
 
-Put $R = r(t'+1)$. To ease the notation somewhat, we will sometimes renumber $\gamma =(\gamma_i)_{i=1\ldots R}$, where the correspondence is $\gamma_{ij}:= \gamma_{(i-1)(r'+1)+j+1}$.
+Put $R = r(r'+1)$. To ease the notation somewhat, we will sometimes renumber $\gamma =(\gamma_i)_{i=1\ldots R}$, where the correspondence is $\gamma_{ij}:= \gamma_{(i-1)(r'+1)+j+1}$.
 Write $\langle \gamma\rangle_i := (\gamma_1, \ldots, \gamma_{i})$.
 There exists a partition of $\text{GR}(f)$ into a finite union of cells $A$ of the following form. 
 For each $A$, one has a definable set $\tilde{S}_A \subseteq S$, and for $1 \leqslant i \leqslant R+1$, a tuple of definable functions
