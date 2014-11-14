@@ -1,15 +1,15 @@
 % !TEX root = nov.tex
 \section{Rationality}
-In this section we will give a proof of Theorem \ref{thm:rationality}, which we restate here in a version that gives more details about the exact form of the rational function. 
+In this section we will give a proof of Theorem \ref{thm:rationality}, which we restate here in a more general version, that gives more details about the exact form of the rational function. 
 \begin{thm}
-Suppose that $(K,\cL)$ is relatively P-minimal. Let $X$ be an $\cL_2$-definable subset of $D\times \NN$, where $D$ is a compact subset of $K^m$.  Write $a_n$ for the Haar measure of $X_n:=\{x\in K^m\mid (x,n)\in X\}$, for each $n\geq 0$. Then the series $\sum_{i\geq 0} a_i T^i$ is a rational function of the form
-\[\sum_{i\geq 0} a_i T^i = \frac{Q(T) }{(1-T^N)^k},\]
-where $k, N \in \N$ and  $Q(T) \in \AA_{q_K}[T]$. 
+Suppose that $(K,\cL)$ is relatively P-minimal. Let $X$ be an $\cL_2$-definable subset of $D\times \NN$, where $D$ is a compact subset of $K^m$.  Write $a_n$ for the Haar measure of $X_n:=\{x\in K^m\mid (x,n)\in X\}$, for each $n\geq 0$. Then the series $\sum_{i\geq 0} a_i T^i$ is a rational function. More precisely, 
+\[\sum_{i\geq 0} a_i T^i = \frac{Q(T) }{\prod_{i=1}^r(1-q_K^{-m_i}T^N)^{k_i}},\]
+for certain integers $m_i, k_i,r, N \in \NN$, and $Q(T) \in \AA_{q_K}[T]$. 
 \end{thm}
 \begin{proof}
 
 
-Applying Theorem \ref{thm1} to the set $X \subset \cO_K^n\times \NN$, one can find a constructible function $g: \NN \to \AA_{q_K}$, such that
+Applying Theorem \ref{thm1} to the set $X \subset D\times \NN$, one can find a constructible function $g: \NN \to \AA_{q_K}$, such that
 \[g(n) = \int_{X_n}|dx|.\]
 This function must have the form 
 \[g(n) = \sum_{i=1}^r a_iq_K^{\alpha_i(n)}\prod_j\beta_{ij}(n),\]
@@ -25,23 +25,27 @@ where $A_i' =\lfloor \frac{A_i-k_i}{N}\rfloor$, and $B_i' =\lceil \frac{B_i-k_i}
 
 We will now consider the integral
 \[I(\sigma):=\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|,\] 
-and show that $I(\sigma)$ is rational in $q_K^{-\sigma}$.
+where $\sigma \in \RR$, with $\sigma>0$, and show that $I(\sigma)$ is rational in $q_K^{-\sigma}$.
 
 Using the observations above, we get that
 \begin{eqnarray*}
 I(\sigma) %&=& \sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|\\
-&=& \sum_{i\in I}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
-&=&\sum_{C_i'}(q_K^{-\sigma})^{k_i} \sum_{n_i' \in C_i'}\sum_{j=1}^r a_{ij}'q_K^{(-N\sigma +m_{ij})n_i'}P(n_i').
+%&=& \sum_{i\in I}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
+&=& \sum_{i\in I\backslash I_1}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right] + \sum_{i\in I_1}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
+&=&Q_1(q_K^{-\sigma}) +\sum_{i \in I_1 }(q_K^{-\sigma})^{k_i} \sum_{n_i' \in C_i'}\sum_{j=1}^r a_{ij}'q_K^{(-N\sigma +m_{ij})n_i'}P_i(n_i'),
 \end{eqnarray*}
+for some polynomial $Q_1(T) \in \AA_{q_K}[T]$, since the set $\cup_{i\in I\backslash I_1} C_i'$ is finite.
 %where $C_i'$ is the set $\{n'\in \N \mid A_i'\ \square_1 \ n' \ \square_2 \ B_i'\}$. 
+
 This sum can be computed, using the fact that for all $a \in \N$ and $P(t) \in \Z[t]$ of degree $d$, the following holds in $\Z[[t]]$:
 \[\sum_{n \geqslant a} P(n)t^n =\sum_{i=0}^d	\frac{[\Delta^iP(a)]t^{a+i}}{(1 - t )^{i+1}}.\]
 Here $\Delta^i$ is the $i$-th iterate of the difference operator $\Delta:P \mapsto P(X + 1) - P(X)$ with the convention $\Delta^0P = P$.
 
-{\color{red} This is an equality for formal power series. But the computation includes sums $\sum (q_K^{m_{ij}})^{n'}P(n')$, and these need to be convergent, so we need that $m_ij <0$. Can this be deduced from the fact that $g_i(n)<1$ (since it represents the measure of a subset of $\mathcal{O}_K^n$)??? }
+%{\color{red} This is an equality for formal power series. But the computation includes sums $\sum (q_K^{m_{ij}})^{n'}P(n')$, and these need to be convergent, so we need that $m_ij <0$. Can this be deduced from the fact that $g_i(n)<1$ (since it represents the measure of a subset of $\mathcal{O}_K^n$)??? }
  
 In particular, it is clear that $I(\sigma)$ is rational in $T:=q_K^{-\sigma}$. The specific form of the fraction follows easily from the calculation.
-\\\\\\\\\\
+
 %Let $\alpha$ denote the projection map $\alpha:X\to \NN: (x,n) \mapsto n$, and consider the integral
 %\[I(\sigma):= \int_X (q_K^\alpha)^{-\sigma}|dn||dx|,\]
-%where $\sigma \in \RR$, with $\sigma>0$. Note that  $I(\sigma) =\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|$, and hence we need \end{proof}
+% Note that  $I(\sigma) =\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|$, and hence we need 
+\end{proof}
