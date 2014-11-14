@@ -13,25 +13,27 @@ Applying Theorem \ref{thm1} to the set $X \subset \cO_K^n\times \NN$, one can fi
 \[g(n) = \int_{X_n}|dx|.\]
 This function must have the form 
 \[g(n) = \sum_{i=1}^r a_iq_K^{\alpha_i(n)}\prod_j\beta_{ij}(n),\]
-where $a_i \in \AA_{q_K}$, and the functions $\alpha_i$ and $\beta_{ij}$ are Presburger-definable functions $\NN \to \ZZ$. By the Preparation theorem for Presburger functions, we can partition $\N$ in $\Gamma$-cells $C_i \subseteq \N$ of the form
+where $a_i \in \AA_{q_K}$, and the functions $\alpha_i$ and $\beta_{ij}$ are Presburger-definable functions $\NN \to \ZZ$. By the Preparation theorem for Presburger functions, we can partition $\N$ in $\Gamma$-cells $C_1, \ldots C_r \subseteq \N$ of the form
 \[C_i = \{ n \in \N \mid A_i \ \square_1 \ n \ \square_2\ B_i \ \wedge\ n \equiv k_i \mod N \}\]
  such that on each part $g_i:= g_{|C_i}$ has the form 
-\[g_i(n) = \sum_{j=1}^r a_{ij}'q_K^{m_{ij}(\frac{n-k_i}{N})}P_i\left(\frac{n-k_i}{N}\right),\]
-where $P_i(t)$ is in $\Z[t]$, $m_{ij} \in \N$ and $a_{ij}' \in \AA_{q_K}$. 
+\[g_i(n) = \sum_{j=1}^r a_{ij}q_K^{m_{ij}(\frac{n-k_i}{N})}P_i\left(\frac{n-k_i}{N}\right),\]
+where $P_i(t)$ is in $\Z[t]$, $m_{ij} \in \N$ and $a_{ij} \in \AA_{q_K}$. Moreover, there exists $M \in \N$, such that $g_i(n) <M$ for all $i,n$, since each $X_n$ is contained in the compact set $D$.
+ 
 Now put $n_i' := \frac{n-k_i}{N}$, and write $C_i'$ for the set
 \[C_i'=\{n_i'\in \N \mid A_i'\ \square_1 \ n' \ \square_2 \ B_i'\},\]
-where $A_i' =\lfloor \frac{A_i-k_i}{N}\rfloor$, and $B_i' =\lceil \frac{B_i-k_i}{N}\rceil$.
-\\
-\\
+where $A_i' =\lfloor \frac{A_i-k_i}{N}\rfloor$, and $B_i' =\lceil \frac{B_i-k_i}{N}\rceil$. Write $I = \{1, \ldots, r\}$, and let $I_1$ denote the set of all $C_i'$ be a set on which $\square_2$ denotes \emph{no condition}. It is easy to check that the condition $g_i'(n_i) <M$ must imply that $m_{ij}<0$ whenever $i \in I_1$.  
+
 We will now consider the integral
-\[I(\sigma):=\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|.\] Using the observations above, we get that
+\[I(\sigma):=\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|,\] 
+and show that $I(\sigma)$ is rational in $q_K^{-\sigma}$.
+
+Using the observations above, we get that
 \begin{eqnarray*}
 I(\sigma) %&=& \sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|\\
-&=& \sum_{ C_i}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
+&=& \sum_{i\in I}\left[ \sum_{n \in C_i} (q_K^{-\sigma})^{n}g_i(n)\right]\\
 &=&\sum_{C_i'}(q_K^{-\sigma})^{k_i} \sum_{n_i' \in C_i'}\sum_{j=1}^r a_{ij}'q_K^{(-N\sigma +m_{ij})n_i'}P(n_i').
 \end{eqnarray*}
 %where $C_i'$ is the set $\{n'\in \N \mid A_i'\ \square_1 \ n' \ \square_2 \ B_i'\}$. 
-Note that there exists $M \in \N$, such that $g_i(n) <M$ for all $i,n$, since each $X_n$ is contained in the compact set $D$.
 This sum can be computed, using the fact that for all $a \in \N$ and $P(t) \in \Z[t]$ of degree $d$, the following holds in $\Z[[t]]$:
 \[\sum_{n \geqslant a} P(n)t^n =\sum_{i=0}^d	\frac{[\Delta^iP(a)]t^{a+i}}{(1 - t )^{i+1}}.\]
 Here $\Delta^i$ is the $i$-th iterate of the difference operator $\Delta:P \mapsto P(X + 1) - P(X)$ with the convention $\Delta^0P = P$.
@@ -40,7 +42,6 @@ Here $\Delta^i$ is the $i$-th iterate of the difference operator $\Delta:P \maps
  
 In particular, it is clear that $I(\sigma)$ is rational in $T:=q_K^{-\sigma}$. The specific form of the fraction follows easily from the calculation.
 \\\\\\\\\\
-Let $\alpha$ denote the projection map $\alpha:X\to \NN: (x,n) \mapsto n$, and consider the integral
-\[I(\sigma):= \int_X (q_K^\alpha)^{-\sigma}|dn||dx|,\]
-where $\sigma \in \RR$, with $\sigma>0$. Note that  $I(\sigma) =\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|$, and hence we need to show that $I(\sigma)$ is rational in $q_K^{-\sigma}$.
-\end{proof}
+%Let $\alpha$ denote the projection map $\alpha:X\to \NN: (x,n) \mapsto n$, and consider the integral
+%\[I(\sigma):= \int_X (q_K^\alpha)^{-\sigma}|dn||dx|,\]
+%where $\sigma \in \RR$, with $\sigma>0$. Note that  $I(\sigma) =\sum_{n\in\NN}(q_K^{-\sigma})^{n}\cdot \int_{X_n}|dx|$, and hence we need \end{proof}
