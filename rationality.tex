@@ -1,15 +1,15 @@
 % !TEX root = nov.tex
 \section{Rationality}
 In this section we will give a proof of Theorem \ref{thm:rationality}, which we restate here in a more general version, that gives more details about the exact form of the rational function. 
-\begin{thm}
-Suppose that $(K,\cL)$ is relatively P-minimal. Let $X$ be an $\cL_2$-definable subset of $D\times \NN$, where $D$ is a compact subset of $K^m$.  Write $a_n$ for the Haar measure of $X_n:=\{x\in K^m\mid (x,n)\in X\}$, for each $n\geq 0$. Then the series $\sum_{i\geq 0} a_i T^i$ is a rational function. More precisely, 
+\begin{thm}\label{thm:rationalitygeneral}
+Suppose that $(K,\cL)$ is relatively $P$-minimal. Let $X$ be an $\cL_2$-definable subset of $D\times \NN$, where $D$ is a compact subset of $K^m$.  Write $a_n$ for the Haar measure of $X_n:=\{x\in K^m\mid (x,n)\in X\}$, for each $n\geq 0$. Then the series $\sum_{i\geq 0} a_i T^i$ is a rational function. More precisely, 
 \[\sum_{i\geq 0} a_i T^i = \frac{Q(T) }{\prod_{i=1}^r(1-q_K^{-m_i}T^N)^{k_i}},\]
 for certain integers $m_i, k_i,r, N \in \NN$, and $Q(T) \in \AA_{q_K}[T]$. 
 \end{thm}
 \begin{proof}
 
 
-Applying Theorem \ref{thm1} to the set $X \subset D\times \NN$, one can find a constructible function $g: \NN \to \AA_{q_K}$, such that
+Applying Theorem \ref{thm:partialprep} to the set $X \subset D\times \NN$, one can find a constructible function $g: \NN \to \AA_{q_K}$, such that
 \[g(n) = \int_{X_n}|dx|.\]
 This function must have the form 
 \[g(n) = \sum_{i=1}^r a_iq_K^{\alpha_i(n)}\prod_j\beta_{ij}(n),\]

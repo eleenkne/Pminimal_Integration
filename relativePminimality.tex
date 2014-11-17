@@ -1,0 +1,68 @@
+% !TEX root = nov.tex
+\section{Relative $P$-minimality}
+
+When working in a $p$-adic setting, it is quite natural to distinguish the value group as a separate sort. Cluckers \cite{clu-presb03} made the following observations in this context:
+\begin{thm}\label{thm:semialgpres}
+Let $(K, \Lm)$ be a $P$-minimal field with $P$-minimal theory. 
+\item For any $\Lm$-definable set $X \subseteq (K^{\times})^m$, the set
+\[\ord(X):=\{(\ord x_1, \ldots, \ord x_m) \mid (x_1, \ldots, x_m) \in X\}\]
+is $\Lm_{\text{Pres}}$-definable.
+\item Let $S \subseteq \Gamma_K^m$ be a Presburger-definable set. Then the set
+\[\{\ord^{-1}(S):= \{ (x_1, \ldots, x_m) \in X \mid \ord x \in S\}\]
+is $\Lring$-definable.
+\end{thm} 
+
+Hence, the Presburger language on the value group sort is induced by $\Lring$ on the field sort, and the assumption of $P$-minimality ensures that this is sufficient even for bigger $\Lm$. It seems natural then to have a multi-sorted notion of minimality that takes into account the value group. The following is a general multi-sorted definition of minimality in the same spirit of Macpherson and Steinhorn in \cite{macphersonETAL:96}.
+
+\begin{defn}[Multi-sorted minimality]\label{def:relmin}
+Let $\Lm\subseteq \Lm'$ be first-order multi-sorted languages with $\mathcal{S}=(S_i)_{i\in I}$ the set of sorts in $\Lm'$. Let $\mathcal{S}_0\subseteq \mathcal{S}$ be a subset of sorts in $\Lm$. An $\Lm'$-structure $M$ is called $\Lm$-minimal restricted to $\mathcal{S}_0$, if for every elementary $\Lm'$-structure $N'$ and every finite subset $\{S_{i_1},\ldots,S_{i_n}\}\subseteq \mathcal{S}_0$, every $\Lm'$-definable subset $X\subseteq S_{i_1}\times\cdots\times S_{i_n}$ is already definable by a quantifier-free $\Lm$-formula. A complete $\Lm'$-theory $T$ is $\Lm$-minimal relative to $\mathcal{S}_0$ if some model of $T$ is. 
+\end{defn}
+
+When the languages are one-sorted languages, the definition coincides with the one given in \cite{macphersonETAL:96}. Many different variants of this can be given: allowing quantifiers from sorts in $\Lm$ which are not among $\mathcal{S}_0$, or restricting to binary products $S_{i1}\times S_{i2}$ instead of arbitrary products of finite subsets, to mention just two possibilities. When applied to the multi-sorted language $\Lm_{ring,2}$, this gives a slightly different notion of minimality than relative $P$-minimality since we allow to have more structure in the value group sort. Nevertheless, both notions imply that the induced structure on $\Gamma_K$ is just Presburger arithmetic, as we show in the following proposition. The notion of relative $P$-minimality is due to Cluckers and Halupczok. 
+
+\begin{prop}\label{l=1} Let $(K,\Gamma_K)$ be a relative $P$-minimal structure. Then every definable subset $X\subseteq K\times\Gamma_K^d$ is $\Lm_{ring,2}$-definable. 
+\end{prop}
+
+\begin{proof}
+
+The proof goes by induction on $d\geq 1$ where the base case $d=1$ corresponds to the assumption of relative $P$-minimality. Suppose the result for $d$ and let $X\subseteq K\times \Gamma_K^{d+1}$ be a definable set. By the preparation theorem for $\Gamma$-cells (Proposition \ref{prop:partialcd2}) $X$ decomposes into finitely many cells of the form 
+
+\[B= \left\{(x,\gamma,\delta)\in D\times\Gamma \left|\begin{array}{l} \alpha(x,\gamma) \square_1 \ \delta \ \square_2 \ \beta(x,\gamma), \\
+\delta \equiv k\mod n \end{array}\right\}\right.,\]
+
+where $D$ is a definable subset of $K\times\Gamma_K^d$, $\alpha,\beta$ are definable functions, $k<n$ are positive integers and for all $(x,\gamma,\delta)\in B$
+\[f(x,\gamma,\delta) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma),\]
+for $a$ an integer and $h$ a definable function. By induction hypothesis, $D$, $\alpha,\beta$ and $h$ are $\Lm_{ring,2}$-definable. Therefore, every such cell is $\Lm_{ring,2}$-definable. 
+\end{proof}
+
+As a corollary we can deduce that there is no new induced structure on $\Gamma_K$ than Presburger arithmetic. 
+
+\begin{cor} Let $(K,\Gamma_K)$ be a relative $P$-minimal structure. Then every definable subset of $\Gamma$ (in any power) is $\Lm_{Pres}$-definable.   
+\end{cor}
+
+Recall that the subanalytic language $\Lm_{an}$ on $K$ is Macintyre’s language enriched with the field inverse $^{-1}$ on $K$ extended by $0^{-1}=0$ and, for each convergent power series $f: \mathcal{O}_K^n\to K$, a function symbol for the restricted analytic function
+\begin{equation}
+x\in K^n\mapsto=
+\begin{cases}
+f(x) & if x\in \mathcal{O}_K^n\\
+0 & \text{otherwise}
+\end{cases}
+\label{eq:subanalytic}
+\end{equation}
+
+We show as stated previously that the structure of subanalytic sets is relative $P$-minimal:
+
+\begin{lem}\label{lem:suban}
+Let $(K, \Lm_{\text{an}})$ be the structure of subanalytic sets. The induced two-sorted $\Lm_{\text{an},2}$-structure $(K, \Gamma_K)$ is relatively $P$-minimal. 
+\end{lem}
+\begin{proof}
+Recall that this structure has elimination of quantifiers. Let $X \subseteq K \times \Gamma_K$ be a subanalytic set, defined by a formula $\phi(x,\gamma)$. This formula can then be written in the form
+\[\phi(x,\gamma):= \phi_1(x) \wedge (\ord f_1(x), \ldots, \ord f_r(x), \gamma) \in P,\]
+where $P \subseteq \Gamma_K^{r}$ is a Presburger set. 
+By $P$-minimality, we may assume that there exists an $\Lring$-formula $\psi_1(x)$, such that $K \models \psi_1(x) \leftrightarrow \phi_1(x)$. Moreover, by the preparation theorem for subanalytic functions, we have that $\ord f_i(x) = \frac1{e_i}\ord a_i(x-c)^{\mu_i}$, and hence there exists a semi-algebraic function $h_i(x)$ such that $\ord f_i(x) = \ord h_i(x)$. It is then clear that the (extended) structure of subanalytic sets is relatively $P$-minimal.
+\end{proof}
+
+We do not know if the notion of relative $P$-minimality is stronger than classical $P$-minimality. 
+%If analogues for cell decompositon and preparation theorems were proven for $P$-minimal structures, both notions would be equivalent. We leave this question open. 
+
+ 
