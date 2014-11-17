@@ -1,7 +1,15 @@
 % !TEX root = nov.tex
 \section{Introduction}
+UNDER CONSTRUCTION\\
+When working with valued fields, it is often natural to consider many-sorted languages, where we not only have a field sort $K$, but also sorts like for example the value group $\Gamma_K$ or the residue field $k_K$. Traditionally, this is considered as a main sort (the field sort), where the other sorts are seen as auxiliary, and the focus is on which sets in the main sort are definable, where we add in the other sorts for convenience.
 
-Let $K$ be a $p$-adic field and $\Gamma_K$ be its value group. Let $\cL_{\rm ring}$ be the ring language and let $\cL$ be a language containing $\cL_{\rm ring}$. Associated to $\cL$ is the two-sorted language $\cL_2$ which consists of a sort for $K$ in $\cL$, a sort for $\Gamma_K\cup\{+\infty\}$ in the language of Presburger arithmetic $\cL_{Pres}$ and the valuation map $\ord: K\to \Gamma_K\cup\{+\infty\}$. In order to prove the rationality of different functions, Denef introduced the following class of functions: 
+This paper is a first exploration into a minimality concept for p-adically closed fields, where we consider both the field sort and the \emph{auxiliary} sort $\Gamma_K$ to be of equal importance. More specifically, we will consider the following minimality concept: 
+
+\begin{defn}
+Call the $\Lm_2$-structure $(K,\Gamma_K)$ \emph{relatively $P$-minimal} (relative to the sort $\Gamma$), if, for any elementary equivalent $\Lm_2$-structure $(K',\Gamma_{K'})$, any $\Lm_2$-definable subset $X\subseteq K'\times \Gamma_{K'}$ is already $\cL_{\rm ring, 2}$-definable.
+\end{defn}
+----------------------------------------------------------------------------------------------\\
+Let $\cL_{\rm ring}$ be the ring language and let $\cL$ be a language containing $\cL_{\rm ring}$. Associated to $\cL$ is the two-sorted language $\cL_2$ which consists of a sort for $K$ in $\cL$, a sort for $\Gamma_K\cup\{+\infty\}$ in the language of Presburger arithmetic $\cL_{Pres}$ and the valuation map $\ord: K\to \Gamma_K\cup\{+\infty\}$. In order to prove the rationality of different functions, Denef introduced the following class of functions: 
 
 \begin{defn}
 Let $X$ be an $\cL_2$-definable set. Write $\AA_{q_K}$ for the ring \[\AA_{q_K}:=\ZZ\left[q_K, q_k^{-1}, \left(\frac1{1-q_k^{-i}}\right)_{i\in \NN, i>0}\right].\]
