@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  19 NOV 2014 11:09
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  19 NOV 2014 13:49
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -311,15 +311,12 @@ tionality.aux) (./relativePminimality.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2931 strings out of 493876
- 33154 string characters out of 1150567
+ 2933 strings out of 493876
+ 33178 string characters out of 1150567
  89693 words of memory out of 3000000
- 5972 multiletter control sequences out of 10000+50000
+ 5974 multiletter control sequences out of 10000+50000
  24424 words of font info for 69 fonts, out of 3000000 for 5000
  875 hyphenation exceptions out of 8191
  34i,14n,33p,862b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -353,7 +350,7 @@ type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti0800.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
 1/public/cm-super/sfti0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
 public/cm-super/sfti1095.pfb>
-Output written on nov.pdf (22 pages, 454754 bytes).
+Output written on nov.pdf (22 pages, 457196 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)

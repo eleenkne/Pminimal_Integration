@@ -148,7 +148,27 @@ Iterating this, we obtain a cell decomposition for $A$ where the center of each 
 \end{proof}
 {\color{blue} Question: how far can this argument be extended? Could it be concluded that after the right partitioning, the choice of center will only depend on the $K$-variables?}
 
-In this case we are able to definably choose the centers because we are considering a special case. In the semi-algebraic and sub-analytic case, definable Skolem functions are used to  
+In this case we are able to definably choose the centers because we are considering a special case. In the semi-algebraic and sub-analytic case, definable Skolem functions are used to choose centers from $\Sigma$. However, it is unknown whether a general (relatively) $P$-minimal structure admits definable Skolem functions. Here we will use a somewhat weaker assumption to obtain a cell decomposition theorem where the cells are more independent entities than in Theorem-Definition \ref{def:celdecB}.
+
+\begin{defn}[definable Skolem relations]
+Let $A \subseteq D \times K$ be an $\Lm_2$-definable set, where $D \subseteq K^{r_1} \times \Gamma_K^{r_2}$. Then the set $\mathcal{S}(A)\subseteq D \times \Gamma_K\times K$, consisting of elements $(d,\gamma,t)$, is a definable Skolem relation on $A$, if $\cS(A)$ is a definable set, and
+\begin{itemize}
+\item If the fiber $A_d$ is finite, then the fiber $\cS(A)_{d,\gamma}$ is a singleton $\{t_0\}$ (independent of $\gamma$), such that $(d, t_0) \in A$.
+\item If the fiber $A_d$ is infinite, then:
+\begin{itemize}
+\item If $A_d$ contains balls with radius $\gamma$, then the fiber $\cS(A)_{d,\gamma}$ is a ball $B_\gamma$ with radius $\gamma$, such that $(d,B_{\gamma}) \subset A$. 
+\item If $A_d$ does not contain any balls with radius $\gamma$ then the fiber $\cS(A)_{d,\gamma}$ is a ball $B_0$ (indep. of $\gamma$) with maximal volume (so with minimal possible radius), such that $(d,B_0) \subset A$.
+\end{itemize}
+\end{itemize}
+{\color{red} Or make it simpler and just always pick a ball with maximal possible volume?}   
+\end{defn}
+Does such a relation $\mathcal{S}(A)$ always exist? Whenever the fiber $A_d$ is finite, it is always possible to definably choose an element $t_0 \in K$ such that $(d,t_0) \in A$, see eg. Denef \cite{denef-84}, Lemma 7.1. When the fibers are infinite, it is not known whether one can always choose a ball in a definable way, but clearly it is a weaker condition than classical Skolem functions. {\color{red} to do: give an example where Skolem functions do not exist, but definable Skolem relations do.}
+\begin{thm}
+ Let $(K, \Gamma_K)$ be a {\color{red}(relatively)} $P$-minimal structure with definable Skolem relations. Let $A \subseteq D \times K$ be a definable set. Then $A$ can be partitioned into a finite union of cells of the form
+\end{thm}
+\begin{proof}
+B
+\end{proof}
 
 
 
