@@ -98,5 +98,58 @@ Analogously, for a definable subset $B\subseteq S\times \Gamma_K$, $B$ is a cell
 \[B = \left\{(s,\gamma) \in \Pi_S(B) \times \Gamma \ \left| \ (K,\Gamma_K)\models B_\lambda(\alpha(s),\beta(s),\gamma)\right\}\right..
 \]
 
+\subsection{Some observations regarding the definability of centers}
+
+.{\color{red} This should probably come after the preparation theorem?}\\
+How much information about the centers of a cell decomposition will be definable in general?
+It is obvious that the following is always true.
+
+\begin{def-theorem}[Cell Decomposition]\label{def:celdecB}
+Let $A \subseteq S \times K$ be an $\Lm_2$-definable set in a {\color{red} $P$-minimal structure (is relative necessary?)}. There exist definable sets $D_i \subseteq S$, $\Sigma \subseteq S \times K$, a finite subset $\{\delta_1, \ldots, \delta_r\} \subset P_k$, and definable functions $\alpha_i, \beta_i: D_i \to \Gamma_K$, for $i=1, \ldots, r$, such that for every $(c_1, \ldots, c_r) \in \Sigma$, we have that $A$ can be partitioned as
+ \[A =\bigcup_{i=1}^r \{(x,t) \in D_i \times K \mid C_{\delta_i}(t,c_i, \alpha_i, \beta_i)\}\]
+ A tuple $\{\Sigma, C_1, \ldots, C_r\}$, where $C_i:= \{(x,y,t) \in D_i \times K \mid C_{\delta_i}(t,y, \alpha_i(x), \beta_i(x))\}$ will be called a  decomposition of $A$.
+\end{def-theorem}
+\begin{proof}
+This is an obvious consequence of the preparation theorem \ref{thm:partialprep}. Indeed, the existence and definability of $\delta_i, \alpha_i, \beta_i, D_i$ are implied by the theorem. Once can then just define $B$ to be the set of potential centers:
+\[B = \{(y_1, \ldots, y_r) \in K^r \mid A = \cup_{i=1}^r \{(x,t) \in D_i \times K \mid C_{\delta_i}(t,y_i, \alpha_i, \beta_i)\}.\]
+\end{proof}
+
+
+It is less obvious whether it will be able to find a definable center, i.e. whether it is possible to choose an element from $B$ in a definable way. We will discuss some special cases below.
+Let us first make the following observation about definable functions. 
+
+{\color{red} Assumption: The value group of a p-adically closed field is always countable. A $\Z$-group is isomorphic to a direct sum $\Q^d$ with groups $\Q_p/\Z_p$, which are countable. So if there are only finitely many summands, the resulting group is certainly countable. Otherwise..?} 
+\begin{lem}\label{lem:constant}
+Let $f: D\subseteq \Gamma_K^l \to K$ be a definable function in a relatively $P$-minimal structure. Then $f$ is piecewise constant.
+\end{lem}
+\begin{proof}
+{\color{red} TO DO}
+Suppose not, in which case the image $f(D)$ will be an infinite set. Note that by relative $P$-minimality, the graph of $f$ will be $\Lringtwo$-definable, and hence its image is $\Lring$-definable. So by properties of semi-algebraic sets, the image $f(D)$ must contain an open ball. But this would mean we have a surjective map from the {\color{red} countable} set $D$ to an open ball (which is an uncountable set), which is impossible.
+\end{proof}
+\begin{lem}
+Let $A \subseteq \Gamma_K^l \times K$ be a definable set in a RELATIVELY $P$-minimal structure. Then there exists 
+a decomposition of $A$ of the form 
+$\left\{\{c_1, \ldots, c_r\}, C_1, \ldots, C_r\right\}.${\color{red} What is best notation to use here?}
+\end{lem}
+\begin{proof}
+By Theorem-Definition \ref{def:celdecB}, there exists a decomposition $(\Sigma, C_1, \ldots C_r)$. Write $\Sigma_1$ for the projection
+\[\Sigma_1:= \{(\gamma, y) \in \Gamma_K^l \times K \mid \exists y_2, \ldots, y_r \in K: (\gamma, y, y_2, \ldots, y_r) \in \Sigma\}.\]
+By relatively $P$-minimality and Proposition \ref{l=1}, the set $\Sigma_1 \subseteq \Gamma_K^l \times K$ is $\Lringtwo$-definable. But this means that the related set
+\[\tilde{\Sigma}_1:= \{(x,y_1) \in K^{l+1} \mid (\ord x_1, \ldots, \ord x_r, y_1) \in \Sigma_1\}\] is $\Lring$-definable.
+Hence, because the structure $(K,\Lring)$ has definable Skolem functions, there exists a semi-algebraic map $g:\Pi_l(\tilde{\Sigma}_1) \to K$ such that $(x, g(x)) \in \Sigma_1$ whenever $x \in \Pi_l(\tilde{\Sigma}_1)$. {\color{red} define this notation somewhere!} From this one can deduce a map
+$g_\Gamma: \Pi_l(\Gamma_K)\to K$ defined as
+\[g_{\Gamma}(\gamma) = x \Leftrightarrow (\exists y_1, \ldots, y_l)(\ord y_i = \gamma_i \wedge g(y) =x).\]
+This implies that there exists a cell decomposition of $A$ such that the first cell $C_i$ in the decomposition has the form
+\[\{(\gamma, t) \in D_1 \times K \mid C_{\delta_1}(t, g_{\Gamma}(\gamma), \alpha_i(\gamma), \beta_i(\gamma)\}.\]
+Note that by Lemma \ref{lem:constant}, the function $g_{\Gamma}$ is piecewise constant. Hence, after partitioning $D_1$ we may as well assume that $g_{\Gamma}$ is the constant map $g_{\Gamma}(\gamma) = c_1$, for some $c_1 \in K$.
+We can now apply the same procedure to the set 
+\[\Sigma_2:= \{(\gamma, y) \in \Gamma_K^l \times K \mid \exists y_3, \ldots, y_r \in K: (\gamma, c_1 y, y_2, \ldots, y_r) \in \Sigma\}.\]
+Iterating this, we obtain a cell decomposition for $A$ where the center of each cell is a constant. 
+\end{proof}
+{\color{blue} Question: how far can this argument be extended? Could it be concluded that after the right partitioning, the choice of center will only depend on the $K$-variables?}
+
+In this case we are able to definably choose the centers because we are considering a special case. In the semi-algebraic and sub-analytic case, definable Skolem functions are used to  
+
+
 
 
