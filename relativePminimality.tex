@@ -1,46 +1,69 @@
 % !TEX root = nov.tex
-\section{Relative $P$-minimality}
+\section{Relative $P$-minimality} \label{sec:relativity}
 
-When working in a $p$-adic setting, it is quite natural to distinguish the value group as a separate sort. Cluckers \cite{clu-presb03} made the following observations in this context:
-\begin{thm}\label{thm:semialgpres}
-Let $(K, \Lm)$ be a $P$-minimal field with $P$-minimal theory. 
-\item For any $\Lm$-definable set $X \subseteq (K^{\times})^m$, the set
-\[\ord(X):=\{(\ord x_1, \ldots, \ord x_m) \mid (x_1, \ldots, x_m) \in X\}\]
-is $\Lm_{\text{Pres}}$-definable.
-\item Let $S \subseteq \Gamma_K^m$ be a Presburger-definable set. Then the set
-\[\{\ord^{-1}(S):= \{ (x_1, \ldots, x_m) \in X \mid \ord x \in S\}\]
-is $\Lring$-definable.
-\end{thm} 
+Valued fields constitute an example of structures in which it is quite natural to work in a multi-sorted setting adding auxiliary sorts for the value group $\Gamma_K$ and for the residue field $k_K$. When the field sort has a very tame structure ($p$-adic fields, algebraically closed valued fields), it often imposes not only good properties on all sorts but also a tame interaction between them. Nevertheless, it is not known if minimality conditions on the field sort (as $P$-minimality of $C$-minimality) are strong enough to force these interactions to be tame along the sorts involved. As an example, preparation or cell-decomposition theorems are not known to be true. The notion of ``relative minimality'' here suggested arises as an attempt to deal with this issue. Similar assumption have been made in other contexts.  In its more abstract format, the following is general definition of relative minimality due to Cluckers and Halupszoc:
 
-Hence, the Presburger language on the value group sort is induced by $\Lring$ on the field sort, and the assumption of $P$-minimality ensures that this is sufficient even for bigger $\Lm$. It seems natural then to have a multi-sorted notion of minimality that takes into account the value group. The following is a general multi-sorted definition of minimality in the same spirit of Macpherson and Steinhorn in \cite{macphersonETAL:96}.
-
-\begin{defn}[Multi-sorted minimality]\label{def:relmin}
-Let $\Lm\subseteq \Lm'$ be first-order multi-sorted languages with $\mathcal{S}=(S_i)_{i\in I}$ the set of sorts in $\Lm'$. Let $\mathcal{S}_0\subseteq \mathcal{S}$ be a subset of sorts in $\Lm$. An $\Lm'$-structure $M$ is called $\Lm$-minimal restricted to $\mathcal{S}_0$, if for every elementary $\Lm'$-structure $N'$ and every finite subset $\{S_{i_1},\ldots,S_{i_n}\}\subseteq \mathcal{S}_0$, every $\Lm'$-definable subset $X\subseteq S_{i_1}\times\cdots\times S_{i_n}$ is already definable by a quantifier-free $\Lm$-formula. A complete $\Lm'$-theory $T$ is $\Lm$-minimal relative to $\mathcal{S}_0$ if some model of $T$ is. 
+\begin{defn}(Relative minimality)\label{def:relmini}
+Let $\Lm_B$ be a language with one main sort and possibly some other sorts which are all called auxiliary sorts. Let $\Lm$ be an expansion of $\Lm_B$ and $K$ be an $\Lm$-structure. Say that $K$ is relatively $\Lm_B$-minimal (relative to the auxiliary sorts) if for each Cartesian product $S$ of
+universes of auxiliary sorts of $K$, the following holds:
+any $L$-definable set $X\subseteq K\times S$ is already $\Lm_B$-definable.
 \end{defn}
 
-When the languages are one-sorted languages, the definition coincides with the one given in \cite{macphersonETAL:96}. Many different variants of this can be given: allowing quantifiers from sorts in $\Lm$ which are not among $\mathcal{S}_0$, or restricting to binary products $S_{i1}\times S_{i2}$ instead of arbitrary products of finite subsets, to mention just two possibilities. When applied to the multi-sorted language $\Lm_{ring,2}$, this gives a slightly different notion of minimality than relative $P$-minimality since we allow to have more structure in the value group sort. Nevertheless, both notions imply that the induced structure on $\Gamma_K$ is just Presburger arithmetic, as we show in the following proposition. The notion of relative $P$-minimality is due to Cluckers and Halupczok. 
+If we apply this definition to the two-sorted language $\Lringtwo$ we seem to get a stronger notion than relative $P$-minimality. For an $\Lm_2$-structure $(K,\Gamma_K)$, being $\Lringtwo$-minimal implies that all definable subsets $X\subseteq K\times\Gamma_K^d$ are $\Lm_{ring,2}$-definable, while relative $P$-minimality only gives this when $d=1$. The next proposition shows that relative $P$-minimal structures are actually $\Lringtwo$-minimal. 
 
-\begin{prop}\label{l=1} Let $(K,\Gamma_K)$ be a relative $P$-minimal structure. Then every definable subset $X\subseteq K\times\Gamma_K^d$ is $\Lm_{ring,2}$-definable. 
+\begin{prop}\label{l=1} Every relative $P$-minimal $\Lm_2$-structure is $\Lm_{ring,2}$-minimal. 
 \end{prop}
 
-\begin{proof}
+\begin{proof} We prove that all definable subsets $X\subseteq K\times \Gamma_K^d$ are $\Lringtwo$-definbale. By induction on $d\geq 1$ we prove the following two claims:
+\begin{enumerate}
+\item[$A_d$:] Any $\Lm_2$-definable subset of $K \times \Gamma_K^d$ is $\Lringtwo$-definable.
+\item[$B_d$:] Any $\Lm_2$-definable function $f: Y \subseteq K\times\Gamma_K^d \to \Gamma_K$ is $\Lringtwo$-definable.
+\end{enumerate}
+The proof goes by induction on $d\geq 1$. The base case $A_1$ corresponds to the assumption of relative $P$-minimality. To prove $B_1$, let 
+$f: Y \subseteq K\times\Gamma_K \to \gamma_K$ be a definable function. Then the preparation theorem for $\Gamma$-cells implies that there exists a finite partitioning of $Y$ in ($\Lring$-definable) sets $Y_i$, such that
+\[f_{|Y_i}(x, \gamma) = a_i \left(\frac{\gamma -k_i}{n_i}\right) + h_i(x),\] where $a_i, k_i,n_i$ are constants depending on $Y_i$ and $h_i$ is an $\Lm$-definable function $K \to \Gamma_K$. It follows then from $A_1$ that $h_i$, and hence also $f$ is $\Lring$-definable. 
 
-The proof goes by induction on $d\geq 1$ where the base case $d=1$ corresponds to the assumption of relative $P$-minimality. Suppose the result for $d$ and let $X\subseteq K\times \Gamma_K^{d+1}$ be a definable set. By the preparation theorem for $\Gamma$-cells (Proposition \ref{prop:partialcd2}) $X$ decomposes into finitely many cells of the form 
+Now assume that $A_d, B_d$ hold for some $d \geqslant 1$,  and let $X\subseteq K\times \Gamma_K^{d+1}$ be a definable set. By the preparation theorem for $\Gamma$-cells (Proposition \ref{prop:partialcd2}), $X$ can be partitioned into finitely many cells of the form 
 
-\[B= \left\{(x,\gamma,\delta)\in D\times\Gamma \left|\begin{array}{l} \alpha(x,\gamma) \square_1 \ \delta \ \square_2 \ \beta(x,\gamma), \\
+\[B= \left\{(x,\gamma,\delta)\in D\times\Gamma_K \left|\begin{array}{l} \alpha(x,\gamma) \square_1 \ \delta \ \square_2 \ \beta(x,\gamma), \\
 \delta \equiv k\mod n \end{array}\right\}\right.,\]
 
-where $D$ is a definable subset of $K\times\Gamma_K^d$, $\alpha,\beta$ are definable functions, $k<n$ are positive integers and for all $(x,\gamma,\delta)\in B$
-\[f(x,\gamma,\delta) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma),\]
-for $a$ an integer and $h$ a definable function. By induction hypothesis, $D$, $\alpha,\beta$ and $h$ are $\Lm_{ring,2}$-definable. Therefore, every such cell is $\Lm_{ring,2}$-definable. 
+where $D$ is a definable subset of $K\times\Gamma_K^d$, $\alpha,\beta$ are definable functions, $k<n$ are positive integers.% and for all $(x,\gamma,\delta)\in B$
+%
+%
+%It is then clear from the induction hypothesis (and an iteration of this procedure for $h$), that any function $f: Y \subseteq K\times\Gamma_K^d$
+%
+%
+%Suppose every definable set contained in $K\times\Gamma_K^d$ is $\Lring,2$-definable. As a first step in the induction, consider a definable function
+%$f: Y \subseteq K\times\Gamma_K^d \to \gamma_K$. Then the preparation theorem for $\Gamma$-cells implies that there exists a finite partitioning of $Y$ in sets $Y_i$, such that
+%\[f_{|Y_i}(x, \gamma_1, \ldots, \gamma_d) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma_1, \ldots, \gamma_{d-1}),\] where $a, k,n$ are constants depending on $Y_i$ and $h$ a definable function $K \times \Gamma_K^{d}$. It is then clear from the induction hypothesis (and an iteration of this procedure for $h$), that any function $f: Y \subseteq K\times\Gamma_K^d$
+%
+% and let $X\subseteq K\times \Gamma_K^{d+1}$ be a definable set. 
+%
+%
+%By the preparation theorem for $\Gamma$-cells (Proposition \ref{prop:partialcd2}) $X$ decomposes into finitely many cells of the form 
+%
+%\[B= \left\{(x,\gamma,\delta)\in D\times\Gamma_K \left|\begin{array}{l} \alpha(x,\gamma) \square_1 \ \delta \ \square_2 \ \beta(x,\gamma), \\
+%\delta \equiv k\mod n \end{array}\right\}\right.,\]
+%
+%where $D$ is a definable subset of $K\times\Gamma_K^d$, $\alpha,\beta$ are definable functions, $k<n$ are positive integers and for all $(x,\gamma,\delta)\in B$
+%\[f(x,\gamma,\delta) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma),\]
+%for $a$ an integer and $h$ a definable function {\color{red} What is the relevance of this $f$?}. 
+
+By the induction hypotheses $A_d$ and $B_d$, $D$, $\alpha$, and $\beta$ are $\Lm_{ring,2}$-definable. Therefore, every such cell is $\Lm_{ring,2}$-definable, and hence $A_{d+1}$ holds. The proof of $B_{d+1}$ uses $A_{d+1}$ and exactly the same argument as for $B_1$. 
 \end{proof}
 
-As a corollary we can deduce that there is no new induced structure on $\Gamma_K$ than Presburger arithmetic. 
+Another apparent difference between the concepts of relative $P$-minimality and $\Lringtwo$-minimality is that the later allows languages expanding not only the field structure but also the valued group structure. This seems more general than relative $P$-minimality given that in this notion the Presburger language is fixed on $\Gamma_K$. We show that in fact a $\Lringtwo$-minimal structure $(K,\Gamma_K)$ does not add any more structure to $\Gamma_K$, that the definable sets on $\Gamma_K$ are Presburger definable sets. 
 
-\begin{cor} Let $(K,\Gamma_K)$ be a relative $P$-minimal structure. Then every definable subset of $\Gamma$ (in any power) is $\Lm_{Pres}$-definable.   
+\begin{cor} Let $(K,\Gamma_K)$ be a $\Lringtwo$-minimal structure. Then every definable subset of $\Gamma_K$ (in any power) is $\Lm_{Pres}$-definable.   
 \end{cor}
+\begin{proof}
+Let $X\subseteq \Gamma_K^d$ be a definable subset. By $\Lringtwo$-minimality, $X$ is $\Lringtwo$-definable and by quantifier elimination in $\Lringtwo$, it is easy to see it is $\Lm_{Pres}$-definable.
+\end{proof}
 
-Recall that the subanalytic language $\Lm_{an}$ on $K$ is Macintyre’s language enriched with the field inverse $^{-1}$ on $K$ extended by $0^{-1}=0$ and, for each convergent power series $f: \mathcal{O}_K^n\to K$, a function symbol for the restricted analytic function
+
+
+We finish by showing that $p$-adically closed fields are relative $P$-minimal in $\Lm_{an}$. Recall that the subanalytic language $\Lm_{an}$ on $K$ is Macintyre's language enriched with the field inverse $^{-1}$ on $K$ extended by $0^{-1}=0$ and, for each convergent power series $f: \mathcal{O}_K^n\to K$, a function symbol for the restricted analytic function
 \begin{equation}
 x\in K^n\mapsto=
 \begin{cases}
@@ -63,6 +86,32 @@ By $P$-minimality, we may assume that there exists an $\Lring$-formula $\psi_1(x
 \end{proof}
 
 We do not know if the notion of relative $P$-minimality is stronger than classical $P$-minimality. 
+
+
+%
+%
+%It is then clear from the induction hypothesis (and an iteration of this procedure for $h$), that any function $f: Y \subseteq K\times\Gamma_K^d$
+%
+%
+%Suppose every definable set contained in $K\times\Gamma_K^d$ is $\Lring,2$-definable. As a first step in the induction, consider a definable function
+%$f: Y \subseteq K\times\Gamma_K^d \to \gamma_K$. Then the preparation theorem for $\Gamma$-cells implies that there exists a finite partitioning of $Y$ in sets $Y_i$, such that
+%\[f_{|Y_i}(x, \gamma_1, \ldots, \gamma_d) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma_1, \ldots, \gamma_{d-1}),\] where $a, k,n$ are constants depending on $Y_i$ and $h$ a definable function $K \times \Gamma_K^{d}$. It is then clear from the induction hypothesis (and an iteration of this procedure for $h$), that any function $f: Y \subseteq K\times\Gamma_K^d$
+%
+% and let $X\subseteq K\times \Gamma_K^{d+1}$ be a definable set. 
+%
+%
+%By the preparation theorem for $\Gamma$-cells (Proposition \ref{prop:partialcd2}) $X$ decomposes into finitely many cells of the form 
+%
+%\[B= \left\{(x,\gamma,\delta)\in D\times\Gamma_K \left|\begin{array}{l} \alpha(x,\gamma) \square_1 \ \delta \ \square_2 \ \beta(x,\gamma), \\
+%\delta \equiv k\mod n \end{array}\right\}\right.,\]
+%
+%where $D$ is a definable subset of $K\times\Gamma_K^d$, $\alpha,\beta$ are definable functions, $k<n$ are positive integers and for all $(x,\gamma,\delta)\in B$
+%\[f(x,\gamma,\delta) = a \left(\frac{\delta -k}{n}\right) + h(x,\gamma),\]
+%for $a$ an integer and $h$ a definable function {\color{red} What is the relevance of this $f$?}. 
+
+
 %If analogues for cell decompositon and preparation theorems were proven for $P$-minimal structures, both notions would be equivalent. We leave this question open. 
 
- 
+
+
+

@@ -1,43 +1,44 @@
-\documentclass[11pt]{amsart}
+\documentclass[10pt]{article}
 %\documentclass{amsart}
-\usepackage{amssymb, amsthm}
+\usepackage{amssymb, amsthm, amsmath}
 \usepackage{amsfonts}
 \usepackage{amscd}
 \usepackage[T1]{fontenc}
 %\usepackage[all]{xypic}
 %\usepackage{amsmath}
-\usepackage{color,mdwlist,enumitem}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{mdwlist,enumitem}
 %\usepackage{showkeys}
 %\usepackage{tikz}
 %\usepackage{amsrefs}
 
 %\usepackage{hyperref}
 
-% replaced \newcommand by \long\def to allow paragraph breaks inside.
-\long\def\comment#1{\marginpar{{\footnotesize\color{red} #1\par}}}
-\long\def\commentimmi#1{\marginpar{{\footnotesize\color{green} #1\par}}}
-\long\def\change#1{{\color{blue} #1}}
-\newcommand\green[1]{{\color{green} #1}}
-% Strike things out: (doesn't work well with line breaks)
-\newbox\removebox
-\newcommand\remove[1]{%
-\setbox\removebox=\ifmmode\hbox{$#1$}\else\hbox{#1}\fi%
-\leavevmode
-\rlap{\textcolor{blue}{\vrule height0.8ex depth-0.6ex width\wd\removebox}}%
-\box\removebox
-}
-\long\def\bigremove#1{%
-\par\setbox\removebox=\vbox{#1}%
-\vbox{%
-\vbox to0pt{\hbox{\tikz\draw[color=blue,thick] (0,0) -- (\wd\removebox,-\ht\removebox)  (\wd\removebox,0) -- (0,-\ht\removebox);}}
-\box\removebox
-}
-}
-
-\long\def\jc#1{{\color{green} #1}}
-
-
-\usepackage{mathrsfs} %for the \mathscr
+%%% replaced \newcommand by \long\def to allow paragraph breaks inside.
+%%\long\def\comment#1{\marginpar{{\footnotesize\color{red} #1\par}}}
+%%\long\def\commentimmi#1{\marginpar{{\footnotesize\color{green} #1\par}}}
+%%\long\def\change#1{{\color{blue} #1}}
+%%\newcommand\green[1]{{\color{green} #1}}
+%%% Strike things out: (doesn't work well with line breaks)
+%%\newbox\removebox
+%%\newcommand\remove[1]{%
+%%\setbox\removebox=\ifmmode\hbox{$#1$}\else\hbox{#1}\fi%
+%%\leavevmode
+%%\rlap{\textcolor{blue}{\vrule height0.8ex depth-0.6ex width\wd\removebox}}%
+%%\box\removebox
+%%}
+%%\long\def\bigremove#1{%
+%%\par\setbox\removebox=\vbox{#1}%
+%%\vbox{%
+%%\vbox to0pt{\hbox{\tikz\draw[color=blue,thick] (0,0) -- (\wd\removebox,-\ht\removebox)  (\wd\removebox,0) -- (0,-\ht\removebox);}}
+%%\box\removebox
+%%}
+%%}
+%%
+%%\long\def\jc#1{{\color{green} #1}}
+%%
+%%
+%%\usepackage{mathrsfs} %for the \mathscr
 
 
 \newcommand{\Cexp}{\mathrm{C}^{\mathrm{exp}}}
@@ -57,10 +58,10 @@
 \newcommand{\Lringtwo}{\Lm_{\text{ring,2}}}
 
 
-\def\RDefe{Q^{\rm exp}}
+%\def\RDefe{Q^{\rm exp}}
 
 
-\newcommand{\iso}{\mathrel{\overset{\sim}{\smash{\longrightarrow}\vrule height.3ex width0ex\relax}}}
+%\newcommand{\iso}{\mathrel{\overset{\sim}{\smash{\longrightarrow}\vrule height.3ex width0ex\relax}}}
 
 
 \def\deg{\operatorname{deg}}
@@ -197,28 +198,28 @@
 \newtheorem{remark - ques}[subsubsection]{Remark/Quesion}
 
 
-\theoremstyle{plain}
+%\theoremstyle{plain}
 
 
-\newcommand{\todo}[1]{\marginpar{{\scriptsize #1\par}}}
-
-\numberwithin{equation}{subsection}
-
-%\newcommand{\sur}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}  use \binom
-\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
-
+%\newcommand{\todo}[1]{\marginpar{{\scriptsize #1\par}}}
+%
+%%\numberwithin{equation}{subsection}
+%
+%%\newcommand{\sur}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}  use \binom
+%\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+%
 \newenvironment{subcase}[1]%
   {\par\medskip\noindent #1\par\begingroup%
     \advance\leftskip by 1em\advance\rightskip by 1em}%
   {\par\endgroup}
+%
+%\def\GM{{\GG_{\mathrm{m}}}}
 
-\def\GM{{\GG_{\mathrm{m}}}}
-
-\DeclareMathOperator*{\lcm}{lcm}
-\DeclareMathOperator*{\Spec}{Spec}
-\DeclareMathOperator*{\Specf}{Spf}
-\DeclareMathOperator*{\Spf}{Spf}
-\DeclareMathOperator*{\sqc}{\sqcup}
+%\DeclareMathOperator*{\lcm}{lcm}
+%\DeclareMathOperator*{\Spec}{Spec}
+%\DeclareMathOperator*{\Specf}{Spf}
+%\DeclareMathOperator*{\Spf}{Spf}
+%\DeclareMathOperator*{\sqc}{\sqcup}
 %\DeclareMathOperator*{\sq}{\square}
 \newcommand{\sq}{\mathrel{\square}}
 \newcommand{\ord}{\operatorname{ord}}
@@ -233,18 +234,18 @@
 %\newcommand{\GL}{\operatorname{GL}}
 
 
-%    Blank box placeholder for figures (to avoid requiring any
-%    partular graphics capabilities for printing this document).
-\newcommand{\blankbox}[2]{%
-  \parbox{\columnwidth}{\centering
-%    Set fboxsep to 0 so that the actual size of the box will match the
-%    given measurements more closely.
-    \setlength{\fboxsep}{0pt}%
-    \fbox{\raisebox{0pt}[#2]{\hspace{#1}}}%
-  }%
-}
+%%    Blank box placeholder for figures (to avoid requiring any
+%%    partular graphics capabilities for printing this document).
+%\newcommand{\blankbox}[2]{%
+%  \parbox{\columnwidth}{\centering
+%%    Set fboxsep to 0 so that the actual size of the box will match the
+%%    given measurements more closely.
+%    \setlength{\fboxsep}{0pt}%
+%    \fbox{\raisebox{0pt}[#2]{\hspace{#1}}}%
+%  }%
+%}
 
-\parindent=0pt
+%\parindent=0pt
 \begin{document}
 
 \setcounter{tocdepth}{1} % Show subsection in table of contents
@@ -253,16 +254,18 @@
 \title%[Transfer principles for integrability and boundedness]
 {Integration in P-minimal structures -- research program  }
 
-\begin{abstract}
-\end{abstract}
+
 
 %\thanks{The research leading to these results has received funding from the European Research Council under the European Community's Seventh Framework Programme (FP7/2007-2013) / ERC Grant Agreement nr. 246903 NMNAG}
 
 \maketitle
+\begin{abstract}
+\end{abstract}
 
 %\tableofcontents
 
 \include{introduction}
+\include{celldecomposition}
 \include{preparation}
 \include{integration}
 \include{rationality}

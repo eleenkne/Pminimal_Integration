@@ -1,5 +1,5 @@
 % !TEX root = nov.tex
-\section{Integration}
+\section{Integration} \label{sec:integration}
 In this section, $K$ denotes a $p$-adic field, so the value group $\Gamma_K$ will just be $\Z$. Two types of integrals will appear. When integrating over (subsets of) $\cO_K^m$, the Haar measure $\mu$ is used. When integrating over $\Z^n$, we use the counting measure.
 
 We first recall the following Definition and Theorem from \cite{Clu-Gor-Hal-14}.
@@ -42,83 +42,138 @@ Since the result for general $m$ can be obtained by iteration, we may assume tha
 where the $f_{ij}$ are definable functions $X \to \ZZ$, and $a_i \in \AA_{q_K}.$
 Now put $\gamma = (\gamma_{ij})_{i,j}$ and consider the set
 \[\text{GR}(f):= \{(s,\gamma, x)\in S\times \Gamma_K^{(r'+1)r}\times K \mid  \gamma_{ij} = f_{ij}(s,x)\},\]
-which is a permutated version of the combined graphs of the functions generating $f$. We will partition this set in cells, using the cell decomposition results from the previous section. It is easy to see that an iteration of Theorem \ref{thm:partialprep} and Proposition \ref{prop:partialcd2} yields the following.
-
+which is a permutated version of the combined graphs of the functions generating $f$. 
 Put $R = r(r'+1)$. To ease the notation somewhat, we will sometimes renumber $\gamma =(\gamma_i)_{i=1\ldots R}$, where the correspondence is $\gamma_{ij}:= \gamma_{(i-1)(r'+1)+j+1}$.
-Write $\langle \gamma\rangle_i := (\gamma_1, \ldots, \gamma_{i})$.
-There exists a partition of $\text{GR}(f)$ into a finite union of cells $A$ of the following form. 
-For each $A$, one has a definable set $\tilde{S}_A \subseteq S$, and for $1 \leqslant i \leqslant R+1$, a tuple of definable functions
-\[\alpha_i: \tilde{S}_A \times \Gamma_K^{i-1} \to \Gamma_K: (s, \langle \gamma\rangle_{i-1}) \mapsto \alpha_i(s, \langle \gamma\rangle_{i-1}),\]
-and similarly defined functions $\beta_i$. Put $\alpha := \alpha_{R+1}, \beta:= \beta_{R+1}$.  One also has a (not necessarily definable) function $c: \tilde{S}_A \times \Gamma_K^{R}\to K$.
-For each $i =1, \ldots R$, let $\lambda_i =(\square_{i,1}, \square_{i,2},k,N) \in P_{\Gamma}$. We recall the notation 
-\[
-%B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i):= \left[\begin{array}{l} \alpha_i(s,\langle \gamma\rangle_{i-1})\ \square_{i,1} \ \gamma_i \ \square_{i,2} \ \beta_i(s,\langle \gamma\rangle_{i-1}),  \ \ \ \wedge \\
-% \gamma_i \equiv k_i\mod N \end{array}\right].
-B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i):=  [\alpha_i(s,\langle \gamma\rangle_{i-1})\ \square_{i,1} \ \gamma_i \ \square_{i,2} \ \beta_i(s,\langle \gamma\rangle_{i-1}) \ \wedge \
- \gamma_i \equiv k_i\mod N] .
-\]
-If we let $B$ be the set \[
-B:= \left\{(s,\gamma) \in \tilde{S}_A \times \Gamma_K^R \ \left| \ \bigwedge_{i=1}^R B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i)\right\}\right.,\]
-then the partition of $\text{GR}(f)$ will consist of cells of the form
-\[A:=\left\{(s, \gamma, x) \in B \times K \left| \begin{array}{l} 
-\alpha(s,\gamma) \ \square_{1}\ \ord(x -c(s,\gamma)) \ \square_{2}\ \beta(s, \gamma),\\
-\ord(x -c(s,\gamma)) \equiv k \mod N,\\ \ac_M(x -c(s,\gamma, )) = \xi
-\end{array}
-\right\}\right.,\]
-for some $(\square, k, N, M, \xi) \in P_K$.
 
-This partitioning can now be used to compute the given integral. Let $\mu$ denote the usual Haar measure (i.e., normalized such that $\mu(cO_K) =1$. ) We get the following:
-\begin{eqnarray*}
- \int_{X_s} {f(s,x)}|dx|
- &=& \sum_{\delta \in \text{Im}(f_s)} \delta \cdot \mu\{x\in X_s \mid f_s(x) = \delta\}\\
- &=& \sum_\gamma  \left[\left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right)\cdot \mu(\{x\in X_s \mid \bigwedge_{ij} f_{ij}(s,x) = \gamma_{ij}\}\right]\\ 
- &=& \sum_{\{A \mid s \in \tilde{S}_A\}} \left[ \sum_{\gamma \in B_s} \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot \mu(A_{s,\gamma})\right].
-\end{eqnarray*}
-Let us now compute the measure of a fiber $A_{s,\gamma}$. %We will extend the notation $\langle \ldots\rangle_{i}$ introduced above, and write $\langle D\rangle_{i}$ for the projection of the elements of $D$ onto their first $i$ co\"ordinates.  For each $\langle x\rangle_{i-1} \in \langle A_{s,\gamma}\rangle_{i-1}$, write 
-%\begin{align*}\Phi_{s,\gamma}(\langle x\rangle_{i-1})&:= \{ x_{i} \in K \mid x_i \text{ satisfies } \phi_{i1}(c_i) \wedge \phi_{i2}(c_i)\}\\
-%\Phi^{0}_{s,\gamma}(\langle x\rangle_{i-1})&:= \{ x_{i} \in K \mid x_i \text{ satisfies } \phi_{i1}(0) \wedge \phi_{i2}(0)\}
-%\end{align*}
-Put $u =x - c(s, \gamma)$. Since the Haar measure is translation invariant, we have $|dx|=|du|$. Let $\hat{A}$ denote the set
-\[\hat{A}:=\left\{(s, \gamma, u) \in B \times K \left| \begin{array}{l} 
-\alpha(s,\gamma) \ \square_{1}\ \ord u \ \square_{2}\ \beta(s, \gamma),\\
-\ord u \equiv k \mod N,\\ \ac_M(u) = \xi
+We will partition this set in cells, using the cell decomposition results from the previous section. %It is easy to see that an iteration of Theorem \ref{thm:partialprep} and Proposition \ref{prop:partialcd2} yields the following. 
+By Theorem \ref{thm:partialprep}, there exists a $K$-cell decomposition $\{(A_i)_i, (\Sigma_i)_i, (C_{\delta_ij})\}$ of $\text{GR}(f)$. That is, each part $A_i$ has the form
+\[A_i = \left\{(s,\gamma, x) \in D_i \times K \ \left| \ \forall (c_1, \ldots c_{r_i}) \in (\Sigma_i)_{s,\gamma}: \bigvee_{j=1}^{r_i} C_{\delta_{ij}}(x,c_j, \alpha_{ij}, \beta_{ij};s,\gamma)\right\}\right.,\] 
+for some definable subset $D_i \subseteq S \times \Gamma_K^R$. This partitioning can now be used to compute the given integral. Let $\mu$ denote the usual Haar measure (i.e., normalized such that $\mu(cO_K) =1$. ) The integral can be written as a sum ranging over $\text{Im}(f_s)$:
+
+\[ \int_{X_s} {f(s,x)}|dx|
+ = \sum_{\delta \in \text{Im}(f_s)} \delta \cdot \mu\{x\in X_s \mid f_s(x) = \delta\},\]
+ and this sum can be expressed in terms of the variables $\gamma$, to obtain a sum
+\[ \sum_{\{A_i \mid s \in \Pi_S(A_i)\}\  }\sum_{\gamma \in (D_i)_s}  \left[\left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right)\cdot \mu\left(\{x\in X_s \mid \bigwedge_{ij} f_{ij}(s,x) = \gamma_{ij}\}\right)\right]\] 
+Since the partition is finite, we can focus on one of the parts $A_i$, which we will just denote as $A \subseteq D \times K$ from now on. The integral is then reduced to a sum
+\begin{equation}\label{eq:int}
+ \sum_{\gamma \in D_s} \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot \mu(A_{s,\gamma}).
+\end{equation}
+%These sets $D_i$ can be partitioned further, using Proposition \ref{prop:partialcd2}. 
+Let us now compute the measure of a fiber $A_{s,\gamma}$. The $K$-cell decomposition provides a set $\Sigma \subseteq D \times K$, and cell conditions $C_{\delta_j}$.  For every choice of $(s,\gamma, c_1, \ldots, c_r) \in \Sigma$, we get a decomposition
+\[A_{s,\gamma} = \bigcup_{j=1}^r \{x\in K \mid C_{\delta_j}(x,c_j,\alpha_j, \beta_j;s,\gamma)\}.\]
+Let $\widehat{C}_{\delta_j}$ denote the set
+\[\widehat{C}_{\delta_j}:=\left\{(s, \gamma, x) \in D \times K \left| \begin{array}{l} 
+\alpha_j(s,\gamma) \ \square_{j,1}\ \ord x \ \square_{j,2}\ \beta_j(s, \gamma),\\
+\ord x \equiv k_j \mod N,\\ \ac_M(x) = \xi_j
 \end{array}
-\right\}\right.,\]
-We get
+\right\}\right..\]
+Since the Haar measure is translation invariant, we get that
+\[\mu(A_{s,\gamma}) = \int_{A_{s,\gamma}}|dx|
+= \sum_{j=1}^r\left[\int_{(\widehat{C}_{\delta_j})_{s,\gamma}}|dx|\right],\]
+so the measure of $A_{s,\gamma}$ is independent of the choice of $(s,c_1, \ldots, c_r) \in \Sigma$.
+%\[\hat{C}_{\delta_j}:=\left\{(s, \gamma, u) \in B \times K \left| \begin{array}{l} 
+%\alpha_j(s,\gamma) \ \square_{1}\ \ord u \ \square_{2}\ \beta_j(s, \gamma),\\
+%\ord u \equiv k \mod N,\\ \ac_M(u) = \xi
+%\end{array}
+%\right\}\right.\]
+Computing the measures of these cells, we get that
 \begin{eqnarray*}
-\mu(A_{s,\gamma}) &=& \int_{A_{s,\gamma}}|dx|\\
-&=& \int_{\hat{A}_{s,\gamma}}|du|
-\\
-&=& \sum_{\tau \in T}\mu(\xi \pi_K^{k + \tau N} (1 + \pi^{M}\cO_K)),\\
-&=&|\xi|q_K^{-(k+M)}\sum_{\tau \in T} (q_K^{-N})^\tau,
+%\mu(A_{s,\gamma}) &=& \int_{A_{s,\gamma}}|dx|\\
+%&=& \int_{\hat{A}_{s,\gamma}}|du|
+%\\
+\int_{(\widehat{C}_{\delta_j})_{s,\gamma}}|dx|&=& \sum_{\tau \in T_j}\mu\left(\xi_j \pi_K^{k_j + \tau N} (1 + \pi^{M}\cO_K)\right),\\
+&=&|\xi|q_K^{-(k_j+M)}\sum_{\tau \in T_j} (q_K^{-N})^\tau,
 \end{eqnarray*}
-where $\pi_K$ is a uniformizing element of $K$ and $T$ is the set \[T:=\{\tau \in \Gamma_K \mid \alpha(s,\gamma ) \ \Box_{1}\ k + \tau N\ \square_{2}\ \beta(s,\gamma)\}.\]
-Because of our assumptions, the set $A_{s,\gamma}$ must have finite measure, which is only possible if $\square_{1}$ denotes $<$.
-(This is a property of the cell $A$, making it a definable condition)
- 
+where $\pi_K$ is a uniformizing element for $K$ and $T_j$ is the set \[T_j:=\{\tau \in \Gamma_K \mid \alpha_j(s,\gamma ) \ \Box_{j,1}\ k_j + \tau N\ \square_{j,2}\ \beta_j(s,\gamma)\}.\]
+Because of our assumptions, the set $A_{s,\gamma}$ must have finite measure, which is only possible if $\square_{j,1}$ denotes $<$ for $j = 1, \ldots, r$.
+(This is a property of the cell $A$, making it a definable condition.)
+%Write $\langle \gamma\rangle_i := (\gamma_1, \ldots, \gamma_{i})$.
+%%There exists a partition of $\text{GR}(f)$ into a finite union of cells $A$ of the following form. 
+%%For each $A$, one has a definable set $\tilde{S}_A \subseteq S$, and for $1 \leqslant i \leqslant R+1$, a tuple of definable functions
+%%\[\alpha_i: \tilde{S}_A \times \Gamma_K^{i-1} \to \Gamma_K: (s, \langle \gamma\rangle_{i-1}) \mapsto \alpha_i(s, \langle \gamma\rangle_{i-1}),\]
+%%and similarly defined functions $\beta_i$. Put $\alpha := \alpha_{R+1}, \beta:= \beta_{R+1}$.  One also has a (not necessarily definable) function $c: \tilde{S}_A \times \Gamma_K^{R}\to K$.
+%%For each $i =1, \ldots R$, let $\lambda_i =(\square_{i,1}, \square_{i,2},k,N) \in P_{\Gamma}$. We recall the notation 
+%%\[
+%%%B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i):= \left[\begin{array}{l} \alpha_i(s,\langle \gamma\rangle_{i-1})\ \square_{i,1} \ \gamma_i \ \square_{i,2} \ \beta_i(s,\langle \gamma\rangle_{i-1}),  \ \ \ \wedge \\
+%%% \gamma_i \equiv k_i\mod N \end{array}\right].
+%%B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i):=  [\alpha_i(s,\langle \gamma\rangle_{i-1})\ \square_{i,1} \ \gamma_i \ \square_{i,2} \ \beta_i(s,\langle \gamma\rangle_{i-1}) \ \wedge \
+%% \gamma_i \equiv k_i\mod N] .
+%%\]
+%%If we let $B$ be the set \[
+%%B:= \left\{(s,\gamma) \in \tilde{S}_A \times \Gamma_K^R \ \left| \ \bigwedge_{i=1}^R B_{\lambda_i}(\alpha_i,\beta_i,\gamma_i)\right\}\right.,\]
+%%then the partition of $\text{GR}(f)$ will consist of cells of the form
+%%\[A:=\left\{(s, \gamma, x) \in B \times K \left| \begin{array}{l} 
+%%\alpha(s,\gamma) \ \square_{1}\ \ord(x -c(s,\gamma)) \ \square_{2}\ \beta(s, \gamma),\\
+%%\ord(x -c(s,\gamma)) \equiv k \mod N,\\ \ac_M(x -c(s,\gamma, )) = \xi
+%%\end{array}
+%%\right\}\right.,\]
+%%for some $(\square, k, N, M, \xi) \in P_K$.
+%
+%This partitioning can now be used to compute the given integral. Let $\mu$ denote the usual Haar measure (i.e., normalized such that $\mu(cO_K) =1$. ) We get the following:
+%\begin{eqnarray*}
+% \int_{X_s} {f(s,x)}|dx|
+% &=& \sum_{\delta \in \text{Im}(f_s)} \delta \cdot \mu\{x\in X_s \mid f_s(x) = \delta\}\\
+% &=& \sum_\gamma  \left[\left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right)\cdot \mu(\{x\in X_s \mid \bigwedge_{ij} f_{ij}(s,x) = \gamma_{ij}\}\right]\\ 
+% &=& \sum_{\{A \mid s \in \tilde{S}_A\}} \left[ \sum_{\gamma \in B_s} \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot \mu(A_{s,\gamma})\right].
+%\end{eqnarray*}
+%Let us now compute the measure of a fiber $A_{s,\gamma}$.Put $u =x - c(s, \gamma)$. Since the Haar measure is translation invariant, we have $|dx|=|du|$. Let $\hat{A}$ denote the set
+%\[\hat{A}:=\left\{(s, \gamma, u) \in B \times K \left| \begin{array}{l} 
+%\alpha(s,\gamma) \ \square_{1}\ \ord u \ \square_{2}\ \beta(s, \gamma),\\
+%\ord u \equiv k \mod N,\\ \ac_M(u) = \xi
+%\end{array}
+%\right\}\right.,\]
+%We get
+%\begin{eqnarray*}
+%\mu(A_{s,\gamma}) &=& \int_{A_{s,\gamma}}|dx|\\
+%&=& \int_{\hat{A}_{s,\gamma}}|du|
+%\\
+%&=& \sum_{\tau \in T}\mu(\xi \pi_K^{k + \tau N} (1 + \pi^{M}\cO_K)),\\
+%&=&|\xi|q_K^{-(k+M)}\sum_{\tau \in T} (q_K^{-N})^\tau,
+%\end{eqnarray*}
+%where $\pi_K$ is a uniformizing element of $K$ and $T$ is the set \[T:=\{\tau \in \Gamma_K \mid \alpha(s,\gamma ) \ \Box_{1}\ k + \tau N\ \square_{2}\ \beta(s,\gamma)\}.\]
+%Because of our assumptions, the set $A_{s,\gamma}$ must have finite measure, which is only possible if $\square_{1}$ denotes $<$.
+%(This is a property of the cell $A$, making it a definable condition)
 We get the following results for this sum. 
 %If possible, we will suppress the variables and just write $\alpha_m, \beta_m, \ldots$ to keep things readable. 
-Put $\tilde{\alpha}:= \lfloor\frac{\alpha -k}{N}\rfloor+1$, and $\tilde{\beta}:= \lceil\frac{\beta -k}{N}\rceil-1$ (clearly these are still definable functions). 
+If we put $\tilde{\alpha}:= \lfloor\frac{\alpha -k}{N}\rfloor+1$, and $\tilde{\beta}:= \lceil\frac{\beta -k}{N}\rceil-1$ (clearly these are still definable functions), then we get that
+\begin{equation}\label{eq:intcases} \sum_{\tau \in T_j} (q_K^{-N})^\tau = \left\{
+\begin{array}{ll}
+\frac{q_K^{-N\tilde{\alpha}_j}}{1-q_K^{-N}} & \text{if\ \ } \square_{j,2} = \emptyset,\\ %denotes \emph{no condition}
+\frac{1}{1-q_K^{-N}}(q_K^{-N\tilde{\alpha}_j}-q_K^{-N\tilde{\beta}_j}) & \text{if \ \ } \square_{j,2} = <.
+\end{array}\right.\end{equation}
 
-\begin{description}
-\item[If $\square_{1}$ denotes \emph{no condition}]
-\begin{equation}\label{eq:nocond}\sum_{\tau \in T} (q_K^{-N})^\tau = \frac{q_K^{-N\tilde{\alpha}}}{1-q_K^{-N}} \end{equation}
-\item[If $\square_{1}$ denotes <]
-\begin{equation}\label{eq:ineq}\sum_{\tau \in T} (q_K^{-N})^\tau = \frac{q_K^{-N\tilde{\alpha}}-q_K^{-N\tilde{\beta}}}{1-q_K^{-N}} \end{equation}
-\end{description}
-These are both constructible functions, so there exists a constructible function $h(s,\gamma)$ such that \[h(s,\gamma) = \mu(A_{s, \gamma}).\]
-Hence, returning to the computation of $\int_{X_s} f(s,x)|dx|$, we need to compute a sum of the form
-\[\sum_{\gamma \in B_s}\left[ \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot h(s,\gamma)\right]\]
-To compute this sum over gamma, we need to specify how $h(s,\gamma)$ depends on $\gamma$. 
-By (an interation of) proposition \ref{prop:partialcd2}, we may assume that the variables $\gamma_i$ only occur in the functions $\alpha_i$, $\beta_i$ (in \eqref{eq:ineq} and \eqref{eq:nocond} ) in a { linear} way (possibly after refining the cell decomposition). Hence, the problem is reduced to showing that a sum of the form 
-\[\sum_{\gamma \in B_s} \sum_{i=1}^r \left(a_i q_K^{\nu_i(s)}q_K^{b_i(\gamma)} \prod_{j=1}^{R}\gamma_{j}^{a_{ij}}\right),\]
+
+%\begin{description}
+%\item[If $\square_{1}$ denotes \emph{no condition}]
+%\begin{equation}\label{eq:nocond}\sum_{\tau \in T} (q_K^{-N})^\tau = \frac{q_K^{-N\tilde{\alpha}}}{1-q_K^{-N}} \end{equation}
+%\item[If $\square_{1}$ denotes <]
+%\begin{equation}\label{eq:ineq}\sum_{\tau \in T} (q_K^{-N})^\tau = \frac{q_K^{-N\tilde{\alpha}}-q_K^{-N\tilde{\beta}}}{1-q_K^{-N}} \end{equation}
+%\end{description}
+In both cases we obtain an $\Lm_2$-constructible function. Hence, we can conclude that $\mu(A_{s, \gamma})$ is a constructible function as well.
+
+ %there is a constructible function $h(s,\gamma)$ such that \[h(s,\gamma) = \mu(A_{s, \gamma}).\]
+However, given that we wanted to compute the sum \eqref{eq:int}, we will need to determine more explicitly in which way $\mu(A_{s, \gamma})$ depends on $\gamma$. Since $\mu(A_{s, \gamma})$ is given by a sum of terms of the form \eqref{eq:intcases}, this means that we need to consider the functions $\tilde{\alpha}_j$ and $\tilde{\beta}_j$. These are $\Lm_2$-definable functions $D \subseteq S \times \Gamma_K^R$, and hence by (an iteration of) Proposition \ref{prop:partialcd2}, we obtain a finite partition of $D$ in cells $\widehat{D}$, on each of which the functions $\tilde{\alpha}_j$,  have the form
+\[\tilde{\alpha}_j(s,\gamma) = \sum_{i=1}^R a_j\left(\frac{\gamma_j-n_j}{n}\right) + \delta_j(s),\]
+where $a_j \in \Z$, $n_j, n \in \N$ and the $\delta_j$ are $\Lm_2$-definable functions $S \to \Gamma_K$. Similarly for the $\tilde{\beta}_j$. 
+
+Now that we know how $\mu(A_{s, \gamma})$ depends on $\gamma$, instead of showing that the sum \eqref{eq:int} equals an $\Lm_2$-constructible function, it will be sufficient to show that every sum of the form
+%\\\\
+%\\----------------------------------------------------------------------------
+%
+%Hence, returning to the computation of $\int_{X_s} f(s,x)|dx|$, we need to compute a sum of the form
+%\[\sum_{\gamma \in B_s}\left[ \left(\sum_{i=1}^r a_i q_K^{\gamma_{i0}} \prod_{j=1}^{r'}\gamma_{ij}\right) \cdot h(s,\gamma)\right]\]
+%To compute this sum over gamma, we need to specify how $h(s,\gamma)$ depends on $\gamma$. In our 
+%By (an interation of) proposition \ref{prop:partialcd2}, we may assume that the variables $\gamma_i$ only occur in the functions $\alpha_i$, $\beta_i$ (in \eqref{eq:ineq} and \eqref{eq:nocond} ) in a { linear} way (possibly after refining the cell decomposition). 
+Hence, the problem is reduced to showing that a sum of the form $F(s,\gamma)$ can be computed uniformly:
+\[F(s,\gamma) := \sum_{\gamma \in B_s} \sum_{i=1}^r \left(a_i q_K^{\nu_i(s)}q_K^{b_i(\gamma)} \prod_{j=1}^{R}\gamma_{j}^{a_{ij}}\right),\]
 %$\sum_{\gamma \in \Pi_{\gamma}(A_s)} q_K^{a\gamma + \delta(s)} $ 
-where the $b_i$ are Presburger definable linear functions, %(i.e., of the form $\sum_{j=1}^R{\mu_{ij}\left(\frac{\gamma_{i}-k_i}{N}\right)}$)
-$a_{ij} \in \mathbb{N}$ and $a_i \in \AA_{q_K}$, can be computed uniformly.
-Let $F: B\to \AA_{q_K}$ be the function defined by
-\[F(s,\gamma) = \left\{\begin{array}{ll}{\sum_{i=1}^r \left(a_i q_K^{\nu_i(s)}q_K^{b_i(\gamma)} \prod_{j=1}^{R}\gamma_{j}^{a_{ij}}\right)} & \text{if } (s,\gamma)\in B\\ 0 & \text{otherwise}.
-\end{array}.\right.\]
-This function is Presburger constructible over $S$, so we can apply
+where $B \subseteq S \times \Gamma_K^R$ is an $\Lm_2$-definable set, the $b_i: B_S \to \Z$ are Presburger definable linear functions, the $\nu_i:S \to \Z$ are $\Lm_2$-definable functions,  %(i.e., of the form $\sum_{j=1}^R{\mu_{ij}\left(\frac{\gamma_{i}-k_i}{N}\right)}$)
+$a_{ij} \in \mathbb{N}$ and $a_i \in \AA_{q_K}$.
+%Let $F: B\to \AA_{q_K}$ be the function defined by
+%\[F(s,\gamma) = \left\{\begin{array}{ll}{\sum_{i=1}^r \left(a_i q_K^{\nu_i(s)}q_K^{b_i(\gamma)} \prod_{j=1}^{R}\gamma_{j}^{a_{ij}}\right)} & \text{if } (s,\gamma)\in B\\ 0 & \text{otherwise}.
+%\end{array}.\right.\]
+
+The function $F(s,\gamma)$ is Presburger constructible over $S$, so we can apply
 Theorem-Definition \ref{thm:presburgerloci} to conclude that its locus of integrability $\text{Int}(F,S)$ can be defined uniformly as the zero locus of an $\Lm$-constructible function $h: S\to \AA_{q_K}$. 
 This lemma also implies that one can find a function $G(s,\gamma)$ with $\text{Int}(G,S)= S$ and $G(s,\gamma) = F(s,\gamma)$ whenever $s \in \text{Int}(F,S)$. Because of this, we may as well assume that $\text{Int}(F,S)=S$. Applying Theorem \ref{thm:presburger-int} to $G(s,\gamma)$ concludes the proof.
 \end{proof}

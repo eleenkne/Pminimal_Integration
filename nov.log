@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  19 NOV 2014 13:49
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.30)  25 NOV 2014 17:09
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -13,14 +13,49 @@ greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
 tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
 omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
 sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amscls/amsart.cls
-Document Class: amsart 2004/08/06 v2.20
-\linespacing=\dimen102
-\normalparindent=\dimen103
-\normaltopskip=\skip41
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks15
+\thm@bodyfont=\toks16
+\thm@headfont=\toks17
+\thm@notefont=\toks18
+\thm@headpunct=\toks19
+\thm@preskip=\skip43
+\thm@postskip=\skip44
+\thm@headsep=\skip45
+\dth@everypar=\toks20
+)
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip42
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -28,99 +63,60 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks14
-\ex@=\dimen104
+\@emptytoks=\toks21
+\ex@=\dimen103
 ))
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen105
+\pmbraise@=\dimen104
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count79
+\inf@bad=\count87
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count80
-\leftroot@=\count81
+\uproot@=\count88
+\leftroot@=\count89
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count82
-\DOTSCASE@=\count83
+\classnum@=\count90
+\DOTSCASE@=\count91
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen106
+\big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count84
-\c@MaxMatrixCols=\count85
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
-\c@parentequation=\count86
-\dspbrk@lvl=\count87
-\tag@help=\toks15
-\row@=\count88
-\column@=\count89
-\maxfields@=\count90
-\andhelp@=\toks16
-\eqnshift@=\dimen107
-\alignsep@=\dimen108
-\tagshift@=\dimen109
-\tagwidth@=\dimen110
-\totwidth@=\dimen111
-\lineht@=\dimen112
-\@envbody=\toks17
-\multlinegap=\skip43
-\multlinetaggap=\skip44
-\mathdisplay@stack=\toks18
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks22
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks23
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks24
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 407.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2001/10/25 v2.2f
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-)
-\copyins=\insert233
-\abstractbox=\box28
-\listisep=\skip45
-\c@part=\count91
-\c@section=\count92
-\c@subsection=\count93
-\c@subsubsection=\count94
-\c@paragraph=\count95
-\c@subparagraph=\count96
-\c@figure=\count97
-\c@table=\count98
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
-\captionindent=\dimen113
-\thm@style=\toks19
-\thm@bodyfont=\toks20
-\thm@headfont=\toks21
-\thm@notefont=\toks22
-\thm@headpunct=\toks23
-\thm@preskip=\skip48
-\thm@postskip=\skip49
-\thm@headsep=\skip50
-\dth@everypar=\toks24
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2002/01/22 v2.2d
-)
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 1999/11/29 v1.2d
-\athelp@=\toks25
-\minaw@=\dimen114
-\bigaw@=\dimen115
-\minCDarrowwidth=\dimen116
+\athelp@=\toks26
+\minaw@=\dimen112
+\bigaw@=\dimen113
+\minCDarrowwidth=\dimen114
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -129,230 +125,273 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/local/texlive/2008/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
 \Gread@gobject=\count99
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen115
+\extrarowheight=\dimen116
+\NC@list=\toks27
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+\everycr=\toks28
+\minrowclearance=\skip51
+)
+\rownum=\count100
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
 ))
 (/usr/local/texlive/2008/texmf-dist/tex/latex/mdwtools/mdwlist.sty
 Package: mdwlist 1996/05/02 1.1 Various list-related things
 )
 (/usr/local/texlive/2008/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2007/06/30 v2.1 Customized lists
-\enit@toks=\toks26
+\enit@toks=\toks29
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks27
+\KV@toks@=\toks30
 )
-\labelindent=\skip51
+\labelindent=\skip52
 \enit@outerparindent=\dimen117
-\enitdp@desc=\count100
-)
-\removebox=\box29
+\enitdp@desc=\count101
+) (./nov.aux
+(./introduction.aux) (./celldecomposition.aux) (./preparation.aux
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup6
-) (./nov.aux (./introduction.aux) (./preparation.aux) (./integration.aux)
-(./rationality.aux) (./relativePminimality.aux) (./wellordered.aux))
+LaTeX Warning: Label `thm:partialprep' multiply defined.
+
+) (./integration.aux) (./rationality.aux) (./relativePminimality.aux)
+(./wellordered.aux))
 \openout1 = `nov.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Try loading font information for U+msa on input line 248.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen118
+\scratchbox=\box28
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen119
+\MPnumerator=\count106
+\everyMPtoPDFconversion=\toks32
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 261.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 248.
+LaTeX Font Info:    Try loading font information for U+msb on input line 261.
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 248.
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-(/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen118
-\scratchbox=\box30
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen119
-\MPnumerator=\count105
-\everyMPtoPDFconversion=\toks29
-) [1{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Warning: No \author given.
+
+[1
+
+{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `introduction.aux'.
 
 
 (./introduction.tex
-Overfull \hbox (4.74393pt too wide) in paragraph at lines 29--34
-\T1/cmr/m/n/10.95 -------------------------------------------------------------
-----------------------------------------
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--34
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
 
  []
 
 [2
 
-] [3] [4]
-Overfull \hbox (10.56055pt too wide) in paragraph at lines 109--111
-\T1/cmr/m/it/10.95 A tu-ple $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ^^F\OML/cm
-m/m/it/10.95 ; C[]; [] ; C[]\OMS/cmsy/m/n/10.95 g$\T1/cmr/m/it/10.95 , where $\
-OML/cmm/m/it/10.95 C[] \OT1/cmr/m/n/10.95 := \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/
-10.95 (\OML/cmm/m/it/10.95 x; y; t\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \O
-ML/cmm/m/it/10.95 D[] \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 K \OMS/cmsy/m
-/n/10.95 j \OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t; y;
- []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/
-10.95 ; ^^L[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 ))\OMS
-/cmsy/m/n/10.95 g$
+] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
+
  []
 
-[5]
-Overfull \hbox (7.14914pt too wide) in paragraph at lines 135--136
-[]\T1/cmr/m/n/10.95 By Theorem-Definition 1.9[], there ex-ists a de-com-po-si-t
-ion $\OT1/cmr/m/n/10.95 (^^F\OML/cmm/m/it/10.95 ; C[]; [] C[]\OT1/cmr/m/n/10.95
- )$\T1/cmr/m/n/10.95 .
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 99--126
+
  []
 
-[6]) [7]
-\openout2 = `preparation.aux'.
+[5]) [6]
+\openout2 = `celldecomposition.aux'.
 
- (./preparation.tex [8
+ (./celldecomposition.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
-
-] [9]
-Overfull \hbox (8.56487pt too wide) detected at line 111
-\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K\OMS/
-cmsy/m/n/10 8\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 K [] :
  []
 
-[10]) [11]
-\openout2 = `integration.aux'.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
 
- (./integration.tex [12
+Overfull \hbox (10.78647pt too wide) in paragraph at lines 22--23
+[]\T1/cmr/m/n/10 Given cells $\OML/cmm/m/it/10 C$ \T1/cmr/m/n/10 and $\OML/cmm/
+m/it/10 B$ \T1/cmr/m/n/10 as in the pre-vi-ous def-i-ni-tion we call the tu-ple
+s $\OT1/cmr/m/n/10 (\U/msa/m/n/10 ^^C\OML/cmm/m/it/10 ; k; n; m; ^^X\OT1/cmr/m/
+n/10 )$
+ []
+
+[7
 
 
 ]
-Overfull \hbox (16.66594pt too wide) in alignment at lines 71--76
- [][][] []
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
  []
 
-[13] [14]) [15]
+[8]
+Overfull \hbox (10.32658pt too wide) in paragraph at lines 63--64
+[]\T1/cmr/m/n/10 By The-o-rem 3.3[], there ex-ists a $\OML/cmm/m/it/10 K$\T1/cm
+r/m/n/10 -cell de-com-po-si-tion $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 X[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (^^F[])[]\OML/c
+mm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 )[]\OMS/cmsy/
+m/n/10 g$
+ []
+
+) [9]
+\openout2 = `preparation.aux'.
+
+ (./preparation.tex [10
+
+
+] [11] [12] [13] [14]) [15]
+\openout2 = `integration.aux'.
+
+ (./integration.tex
+[16
+
+
+]
+Overfull \hbox (8.11757pt too wide) detected at line 50
+\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;
+ []
+
+
+Overfull \hbox (1.96121pt too wide) detected at line 56
+[] [] []
+ []
+
+[17] [18]) [19]
 \openout2 = `rationality.aux'.
 
- (./rationality.tex [16
+ (./rationality.tex [20
 
 
-]) [17]
+]) [21]
 \openout2 = `relativePminimality.aux'.
 
  (./relativePminimality.tex
-
-LaTeX Warning: Citation `macphersonETAL:96' on page 18 undefined on input line 
-15.
-
-
-LaTeX Warning: Citation `macphersonETAL:96' on page 18 undefined on input line 
-21.
-
-[18
-
-
-]) [19]
-\openout2 = `wellordered.aux'.
-
- (./wellordered.tex
-Overfull \hbox (6.53198pt too wide) in paragraph at lines 34--35
-[]\T1/cmr/bx/n/10.95 Proposition A.4. []\T1/cmr/m/it/10.95 An de-fin-ably well-
-ordered struc-ture $\OML/cmm/m/it/10.95 M$ \T1/cmr/m/it/10.95 has de-fin-able c
-hoice. 
+Overfull \hbox (5.30501pt too wide) in paragraph at lines 12--13
+\T1/cmr/m/n/10 propo-si-tion shows that rel-a-tive $\OML/cmm/m/it/10 P$\T1/cmr/
+m/n/10 -minimal struc-tures are ac-tu-ally $\OMS/cmsy/m/n/10 L[]$\T1/cmr/m/n/10
+ -minimal. 
  []
 
-[20
+[22
 
 
-]) [21] (./nov.bbl) [22
+] [23]) [24]
+\openout2 = `wellordered.aux'.
 
-] (./nov.aux (./introduction.aux) (./preparation.aux) (./integration.aux) (./ra
-tionality.aux) (./relativePminimality.aux)
+ (./wellordered.tex [25
+
+
+]) [26] (./nov.bbl) [27
+
+] (./nov.aux
+(./introduction.aux) (./celldecomposition.aux) (./preparation.aux)
+(./integration.aux) (./rationality.aux) (./relativePminimality.aux)
 (./wellordered.aux))
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2933 strings out of 493876
- 33178 string characters out of 1150567
- 89693 words of memory out of 3000000
- 5974 multiletter control sequences out of 10000+50000
- 24424 words of font info for 69 fonts, out of 3000000 for 5000
- 875 hyphenation exceptions out of 8191
- 34i,14n,33p,862b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 3219 strings out of 493876
+ 37926 string characters out of 1150567
+ 107348 words of memory out of 3000000
+ 6402 multiletter control sequences out of 10000+50000
+ 22841 words of font info for 65 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 41i,14n,35p,1081b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/loc
 al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texliv
-e/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi5.pfb></usr/local/texlive/2008/tex
-mf-dist/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2008/texmf-dist/fo
-nts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
-bluesky/cm/cmmi8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
-/cmmi9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb
-></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/loca
-l/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2
-008/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2008/texmf-d
-ist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts
-/type1/bluesky/cm/cmsy6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
-esky/cm/cmsy7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
-sy8.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/ams/msam10.pfb>
-</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/ams/msam7.pfb></usr/loc
-al/texlive/2008/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb></usr/local/texli
-ve/2008/texmf-dist/fonts/type1/bluesky/ams/msbm7.pfb></usr/local/texlive/2008/t
-exmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2008/tex
-mf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2008/texmf
--dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2008/texmf-d
-ist/fonts/type1/public/cm-super/sfcc0900.pfb></usr/local/texlive/2008/texmf-dis
-t/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2008/texmf-dist/
-fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2008/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2008/texmf-dist/font
-s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/
-type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2008/texmf-dist/fonts/ty
-pe1/public/cm-super/sfti0800.pfb></usr/local/texlive/2008/texmf-dist/fonts/type
-1/public/cm-super/sfti0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/
-public/cm-super/sfti1095.pfb>
-Output written on nov.pdf (22 pages, 457196 bytes).
+e/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2008/te
+xmf-dist/fonts/type1/bluesky/cm/cmmi5.pfb></usr/local/texlive/2008/texmf-dist/f
+onts/type1/bluesky/cm/cmmi6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
+/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/c
+m/cmmi9.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr10.pf
+b></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr5.pfb></usr/loc
+al/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/texlive/
+2008/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-
+dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blu
+esky/cm/cmsy5.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cm
+sy6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy9.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/public/cmex/fmex7.pfb></usr/local/texlive/2
+008/texmf-dist/fonts/type1/public/cmex/fmex9.pfb></usr/local/texlive/2008/texmf
+-dist/fonts/type1/bluesky/ams/msam10.pfb></usr/local/texlive/2008/texmf-dist/fo
+nts/type1/bluesky/ams/msam7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
+/bluesky/ams/msbm10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky
+/ams/msbm7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/
+sfbx0900.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sf
+bx1000.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfbx
+1440.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm07
+00.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm0900
+.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm1000.p
+fb></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+></usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><
+/usr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></u
+sr/local/texlive/2008/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on nov.pdf (27 pages, 395566 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 222 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

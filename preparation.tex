@@ -1,7 +1,7 @@
 % !TEX root = nov.tex
-\section{Preparation theorem}
+\section{Preparation theorem} \label{sec:prep}
 
-The following is a version of the well-known cell decomposition for semi-algebraic sets. 
+In this section we work in a relative $P$-minimal structure $(K,\Gamma_K)$ where $K$ is a $p$-adically closed field, i.e., a valued field which is elementarily equivalent to a finite extension of $\mathbb{Q}_p$. Although the applications in Sections 3 and 4 are restricted to $p$-adic fields, the results in this section hold for general $p$-adically closed fields. The following is a version of the well-known cell decomposition for semi-algebraic sets. 
 
 \begin{prop}[Semi-algebraic preparation theorem, Theorem 3.3.2 in \cite{Clu-Gor-Hal-14}]\label{prop.celldecomp}
 Let $X \subseteq  S \times K$ and $f_j:X \to\Gamma_K $ be $L_{ring,2}$-definable functions for $j=1,\ldots,r$. Then there exists a finite partition of $X$ into $p$-adic cells $C_i$ 
@@ -12,7 +12,7 @@ such that for each occurring cell $C_i$ one has that for each $(s,t)\in C_i$
 for $a_{ij}$ integers and $h_{ij}: D\to \Gamma_K$ $L_{ring,2}$-definable functions for $j=1,\ldots,r$. 
 \end{prop}
 
-An analogous statement is true where semi-algebraic is replaced by sub-analytic. Notice that in these two cases all $K$-cells have definable centers. 
+An analogous statement is true where semi-algebraic is replaced by sub-analytic.  
 
 \begin{lem}\label{lem.semialgfnc}
 Let $f: X \subseteq K \to \Gamma_K$ be an definable function. Then, there exists an $\cL_{Ring,2}$-definable function {$h: X\to K$} such that \[f(x) = \ord h(x)\] for all $x \in X$. 
@@ -23,6 +23,15 @@ It follows from our assumptions that $\mathrm{Graph}(f)$ is an $\Lm_{\text{ring}
 \[ G(f) := \{(x,y) \in K^2 \mid (x, \ord y) \in \mathrm{Graph}(f)\}.\]
 Clearly, G(f) is semi-algebraic, that is, $\cL_{ring}$-definable. Since the structure of semi-algebraic sets admits definable Skolem functions by a result of van den Dries \cite{vdd-84}, one can find an $\Lring$-definable function $h: \Pi_x(G(f)) \to K$, such that $(x, h(x)) \in G(f)$. 
 \end{proof}
+
+
+\begin{thm}[K-Preparation theorem]\label{thm:partialprep} 
+Let $(K,\Gamma_K)$ be relatively $P$-minimal $\Lm_2$-structure. Let $S\subseteq K^l\times\Gamma^l$ and $X \subseteq S \times K$ be $\Lm_2$-definable sets, and $f:X\rightarrow \Gamma_k$ be an $\Lm_2$-definable function. There exists a $K$-cell decomposition $\{(\Sigma_i)_{i}, (C_{\delta_{ij}})_{i,j})\}$ of $X$, such that for each part $X_i$ in the decomposition and $S_i=\pi_S(X_i)$, there is a tuple of $\Lm_2$-definable functions $\gamma_{ij}:S_i\to\Gamma_K$ and integers $a_{ij}$ satisfying that: for all $s\in S_i$, and for any choice of  $(c_{1,s}, \ldots, c_{r_i,s}) \in (\Sigma_i)_s$, we have that for every $t \in C_{\delta_{ij}}(t,c_j,\alpha_{ij},\beta_{ij};s)$, 
+\[f(s,t) = \gamma_{ij}(s) + a_{ij}\frac{\ord(t-c_{j,s})-k_{ij}}{n},\]
+where $\delta_{ij} =(\Box, k_{ij},n,m,\xi)$.
+%We stress that the functions $c: S\to K$ are NOT necessarily $\Lm_2$-definable {\color{red} EXPLAIN WHAT THIS MEANS AND THAT IT IS BETTER THAN IT SOUNDS}.
+\end{thm}
+
 
 \begin{proof}[Proof of Theorem \ref{thm:partialprep}]
 
@@ -36,7 +45,7 @@ f_s(t)=\ord h_s(t) =\gamma_s + a_s\frac{\ord(t-c_s)-k_s}{n_s},
 \end{equation}
 for some $a_s\in \ZZ$ and $\gamma_s\in \Gamma_K$. Notice that in the cell decomposition of $X_s$ there might appear cells of the same type. 
 
-\begin{claim} 
+\begin{claim}\label{claim:compact} 
 There is a natural number $N\geq 1$ such that for every $s\in S$, there is a cell decomposition of $X_s$ into less than $N$-cells, such that each cell satisfies \ref{eq:preparation} and $n_s,m_s,|a_s|<N$.
 \end{claim}
 
@@ -60,6 +69,7 @@ by
 X_x=C_J(y,(\alpha_1,\alpha_2))\ \wedge \\
 \displaystyle\bigwedge_{1\leq i\leq |J|} \forall t \left( C_{\delta_i}(t,y_i,\alpha_{1i},\alpha_{2i})\to \left(f_x(t)=\alpha_{3i}+a_i\frac{\ord(t-y_i))-k_{\delta_i}}{n_{\delta_i}}\right)\right)\end{array}\right).\\
 \end{equation}
+\normalsize
 Roughly, this formula states that the set $X_x$ can be decomposed into finitely many cells satifying condition \ref{eq:preparation}. Define the set $W_N$ by 
 \begin{equation}\label{WN}
 W_N:=\{(J,a): J\subseteq E_{K,N}, a\in \ZZ^{|J|}, |a_i|<N \text{ for all } 1\leq i\leq |J|\},
@@ -92,7 +102,7 @@ The claim ensures the existence of at least one such $(J,a)$ in $W_N$.
 \item let $\phi_2(s)$ be the $\lhd$-smallest tuple $\alpha\in \Gamma_K^{3|J|}$ such that 
 $$(K,\Gamma_K)\models \exists y\in K^{|J|}\phi_{\sigma_1(s)}(s,y,\alpha).$$
 \end{itemize}
-It is clear that the function $\sigma$ will be definable, once we fix a representation for the finite index set $W_N$. From this information one can then reconstruct the cell decomposition for $X$ and the linear functions satisfying \ref{eq:preparation}, in the following way. Let $S_0:=\Pi_S(X)$ and for $\lambda\in \sigma_1(S_0)$ let $S_{\lambda}$ be the set $\{s \in S_0 \mid \sigma_1(s)=\lambda\}$. For $\lambda=(J,a)\in \sigma_1(S_0)$, $1\leq j\leq |J|$ and $i=1,2,3$ let $\alpha_{\lambda ji}: S_\lambda\to \Gamma_K$ be defined by 
+It is clear that the function $\sigma$ will be definable, once we fix a representation for the finite index set $W_N$. From this information one can then reconstruct the $K$-cell decomposition for $X$ and the linear functions satisfying \ref{eq:preparation}, in the following way. Let $S_0:=\Pi_S(X)$ and for $\lambda\in \sigma_1(S_0)$ let $S_{\lambda}$ be the set $\{s \in S_0 \mid \sigma_1(s)=\lambda\}$. For $\lambda=(J,a)\in \sigma_1(S_0)$, $1\leq j\leq |J|$ and $i=1,2,3$ let $\alpha_{\lambda ji}: S_\lambda\to \Gamma_K$ be defined by 
 
 \[\sigma_2(s)=\left(
 \begin{array}{l}
@@ -101,24 +111,45 @@ It is clear that the function $\sigma$ will be definable, once we fix a represen
 \alpha_{\lambda 13}(s),\ldots,\alpha_{\lambda j3}(s),\ldots, \alpha_{\lambda |J|3}(s),
 \end{array}\right).\] 
 
-This produces a finite partition of $X$ into cells
+For $\lambda=(J,a)\in W_N$, and $s\in S_\lambda$ define 
 
-\[X = \bigcup_{\lambda=(J,a)\in \sigma_1(S_0)}\bigcup_{1\leq j\leq |J|}\left( \prod_{s\in S_\lambda} \{s\}\times C_{\lambda}(K,c(s),\alpha_{\lambda 1j}(s),\alpha_{\lambda 2j}(s))\right)\\
-\]
+\[\Sigma_{\lambda,s}:= \{y\in K^{|J|}|(K,\Gamma_K)\models\phi_{\sigma_1(s)}(s,y,\alpha)\},\]
 
-where $c:\Pi_S(X)\to K$  is a function (not necesarelly definable) picking the centers of such cells. In addition, for each $\lambda=(J,a)\in \sigma_1(S_0)$, each $1\leq j\leq |J|$, each $s\in S_\lambda$ and $\delta_j\in J$ ($1\leq j\leq|J|$) the following holds \small
-\[\exists y\in K\forall t\in K \left(C_{\delta_j}(t,y,\alpha_{\lambda 1j}(s),\alpha_{\lambda 2j}(s)) \rightarrow \left(f_s(t)=\alpha_{\lambda 3j}+a_j\frac{\ord(t-y)-k_{\delta_j}}{n_{\delta_j}}\right)\right).
+which is non-empty by definition of $\sigma_1$. With this we produce a finite partition $X=\bigcup\{X_\lambda|\lambda=(J,a)\in \sigma_1(S_0)\}$ where 
+\small
+\[X_\lambda =\left\{(s,x)\in S_{\lambda}\times K\left|\forall (c_1,\ldots,c_{|J|})\in \Sigma_{\lambda,s}:\bigvee_{1\leq j\leq |J|}C_{\lambda}(x,c_j,\alpha_{\lambda 1j},\alpha_{\lambda 2j};s)\right\}\right..
 \]
 \normalsize
-We stress again that we make no claims about the definability of the centers. 
+By construction, for each $\lambda=(J,a)\in \sigma_1(S_0)$, each $1\leq j\leq |J|$, each $s\in S_\lambda$, each $\delta_j\in J$ ($1\leq j\leq|J|$) and all $(c_1,\ldots,c_{|J|})\in \Sigma_{\lambda,s}$ the following holds \small
+\[\forall t\in K \left(C_{\delta_j}(t,c_j,\alpha_{\lambda 1j},\alpha_{\lambda 2j};s) \rightarrow \left(f_s(t)=\alpha_{\lambda 3j}+a_j\frac{\ord(t-c_j)-k_{\delta_j}}{n_{\delta_j}}\right)\right).
+\]
+\normalsize
+ 
 \end{proof}
 
-Since we work in a two-sorted structure, we will also encounter cells where the leading variable is a $\Gamma_K$-variable. For this case we have the following cell decomposition and preparation result:
+Our proof also shows: 
+
+\begin{thm}[$K$-cell decomposition for $P$-minimal structures]
+Let $K$ be a $P$-minimal $\Lm$-structure and $X \subseteq S \times K$ be a definable set. There exists a $K$-cell decomposition $\{(\Sigma_i)_{i}, (C_{\delta_{ij}})_{i,j})\}$ of $X$.
+\end{thm}
+\begin{proof} Ommiting the function preparation part in the previous argument gives the $K$-cell decomposition. $P$-minimality is used to prove an analogue of claim \ref{claim:compact}. 
+\end{proof}
+
+We now present the preparation theorem for definable subsets of the form $X\subseteq S\times \Gamma_K$. We will use the following theorem of Cluckers \cite{clu-presb03}.
+\begin{thm}\label{thm:semialgpres}
+Let $(K, \Lm)$ be a $P$-minimal field with $P$-minimal theory. 
+\item For any $\Lm$-definable set $X \subseteq (K^{\times})^m$, the set
+\[\ord(X):=\{(\ord x_1, \ldots, \ord x_m) \mid (x_1, \ldots, x_m) \in X\}\]
+is $\Lm_{\text{Pres}}$-definable.
+\item Let $S \subseteq \Gamma_K^m$ be a Presburger-definable set. Then the set
+\[\{\ord^{-1}(S):= \{ (x_1, \ldots, x_m) \in X \mid \ord x \in S\}\]
+is $\Lring$-definable.
+\end{thm}
 
 \begin{prop}\label{prop:partialcd2}
 %Let $(K, \Gamma_K, \Lm_2)$ be a relatively P-minimal structure.
 %Let $S \subseteq K^m \times (\Gamma_K)^{m'}$, 
-Let $X \subseteq S \times \Gamma_K$ be a definable set, and $f: X \to \Gamma_K$ a definable function. There exists a finite decomposition of $X$ into $\Gamma_K$-cells $C$ of the form
+Let $X \subseteq S \times \Gamma_K$ be a definable set, and $f: X \to \Gamma_K$ a definable function. There exists a finite decomposition of $X$ into cells $C$ of the form
 \[C = \left\{(x,\gamma) \in D \times \Gamma_K \ \left| \ \begin{array}{l}\alpha(x)\ \square_1 \ \gamma \ \square_2 \  \beta(x)\quad \text{and}\quad \gamma \equiv n_0 \mod n \end{array} \right\}\right.,\]
 where $D$ is an definable subset of $S$, $\alpha, \beta: S \to \Gamma_K$ are definable functions, and $n_0,n \in \NN$. The partition can be taken such that on each part $C$, there exists a constant $a_{C} \in \ZZ$ and a definable function $\delta: D \to \Gamma_K$, such that for all $(x,\gamma) \in C$,
 \[f(x,\gamma) = a_C \left(\frac{\gamma -n_0}{n}\right) + \delta(x).\]
@@ -133,7 +164,7 @@ which by Theorem \ref{thm:semialgpres} is Presburger definable. This means that 
 \[f_s(\gamma) = a_s \left(\frac{\gamma -n_0}{n_s}\right) + \delta_s.\]
 
 Our claims follow then from a similar argument as the one presented in the proof of Theorem
-\ref{thm:partialprep}. Since no centers are required in this case, the cell decomposition we obtain is even fully definable.
+\ref{thm:partialprep}. Since no centers are required in this case, the cell decomposition we obtain is the classical one.
 \end{proof}
 
 

@@ -1,0 +1,103 @@
+% !TEX root = nov.tex
+\section{Preliminaries} \label{sec:celdec}
+
+Let $(K,\Gamma_K)$ be a $\cL_2$-structure. By a definable set we mean an $\Lm_2$-definable set allowing parameters. For notational purposes we will fix a definable set $S \subseteq K^{m_0} \times \Gamma_K^{m_0}$ which we call a \emph{parameter set}. For a definable set $X\subseteq S\times K$ and $s\in S$, $X_s:=\{x\in K: (s,x)\in X\}$ denotes the fiber over $s$. Analogously, for a definable function $f:X\rightarrow \Gamma_K$, $f_s$ denotes the function $f(s,\cdot):X_s\rightarrow \Gamma_K$. Given two sets $A$ and $B$, we denote by $\Pi_{A}:A\times B\to A$ for the projection onto $A$ and by $\Pi_B:A\times B\to B$ the projection onto $B$. For a positive integer $n\geq 1$, $A^{\leq n}$ denotes $\bigcup_{i=1}^n A^i$. We start defining what cells are.
+\\\\
+The idea behind the notion of a cell is that of a set %typically given by some formula $\phi(f_1(x), \ldots, f_r(x),t)$ where the general form $\phi$ is always the same. A $\phi$-cell would then be a set
+\[\left\{(x,t) \in D \times T \left| \ \ \begin{array}{l} \text{a condition of a fixed form describing } \\ t \text{ in terms of the other variables } x \end{array}  \right\}\right.,\]
+where $D$ is a definable set and $T$ is one of the sorts. Classical examples include semi-algebraic cells as introduced by Denef \cite{denef-86}, and Presburger cells as introduced by Cluckers \cite{clu-presb03}. In our context, the fixed condition used will depend on the sort $T$. We will distinguish the following two kinds of cells:
+
+\begin{defn}[Cells]\label{def:cell} Let $(K,\Gamma_K)$ be a $\cL_2$-structure.  
+\begin{itemize}[leftmargin=*]
+\item A subset $C\subseteq S\times K$ is a $K$-cell if it is of the form 
+\[C = \left\{(s,t) \in D\times K \ \left| \ \begin{array}{l} \alpha(s) \square_1 \ \ord(t-c(s)) \ \square_2 \ \beta(s),\\ \ord(t-c(s)) \equiv k\mod n,\\ \ac_{m}(t-c(s)) = \xi \end{array} \right\}\right.,\]
+where $D$ is a definable subset of $S$, $c$ is a definable function $c:D\to K$, $\alpha, \beta$ are $\Lm_2$-definable functions $D\to\Gamma_k$, $k, n, m \in \NN$, $\xi \in \ac_{m}(K)$ and the squares $\square_i$ may denote $<$ or \emph{no condition}. If the function $c$ is definable, we say that the cell has \emph{definable centers}.  
+\item A subset $B\subseteq S\times \Gamma_K$ is a $\Gamma$-cell if it is of the form
+\[B= \left\{(s,\gamma)\in D\times \Gamma_K \left|\begin{array}{l} \alpha(s) \square_1 \ \gamma \ \square_2 \ \beta(s), \\
+\gamma \equiv k\mod n \end{array}\right\}\right.,\]
+where $D$ is an definable subset of $S$, $\alpha, \beta$ are definable functions $D\to\Gamma_k$, $k, n\in \NN$ and again the squares $\square_i$ may denote $<$ or \emph{no condition}.  
+\end{itemize}
+\end{defn}
+
+Given cells $C$ and $B$ as in the previous definition we call the tuples $(\square,k,n,m,\xi)$ and $(\square,k,n)$ \emph{the type} of $C$ and $B$ respectively. We denote by $P_K$ (resp. $P_\Gamma$) the set of all possible types of $K$-cells (resp. $\Gamma$-cells), that is, the set of tuples $(\square,k,n,m,\xi)$  (resp. $(\square,k,n)$) where $\square = (\square_1, \square_2) \in \{\emptyset, <\}^{2}$, $(k,n,m)$ its a triple of positive integers such that $k<n$, and $\xi\in \ac_{m}(K)$. 
+
+%In the next section we will prove a preparation theorem both for definable subsets $X\subseteq S\times K$ and $X\subseteq S\times \Gamma_K$. In both cases, the theorem includes a cell decomposition of $X$. In the case where $X\subseteq S\times \Gamma_K$, the cell decomposition will have the same form as in the classical theorem for semi-algebraic and sub-analytic sets. However, in the case where $X\subseteq S\times K$, our cell decomposition differs from the classical one. Even if our ``cell decomposition'' seems to be weaker, it is strong enough to have interesting applications as we will show in sections \ref{sec:integration} and \ref{sec:rationality}. 
+
+We now explain what we mean by cell decomposition of definable sets of the form $X\subseteq S\times K$. 
+
+\begin{defn}\label{def:cellcondition} A $K$-cell condition is a formula $C_{\delta}(x,y,\alpha,\beta;s)$ of the form
+ \begin{equation*}
+C_\delta(x,y,\alpha,\beta;s):= \left(\begin{array}{l} \alpha(s)\ \square_1 \ \ord(x-y) \ \square_2 \ \beta(s) \ \wedge\\ \ord(x-y) \equiv k\mod n \ \wedge\\ \ac_{m}(x-y) = \xi \end{array} \right),
+\end{equation*}
+where $\delta \in P_K$, and $\alpha, \beta$ are definable functions $S\to \Gamma_K$. When no $s$ appears, $\alpha,\beta$ are just elements of $\Gamma_K$. 
+%\item A $\Gamma$-cell condition
+\end{defn}
+
+\begin{defn}[$K$-cell decomposition]\label{def:celdecB}
+Let $X \subseteq S \times K$ be an $\Lm_2$-definable set. The set $X$ has a $K$-cell decomposition if there exists a finite partition of $X$ into definable sets $X_i$, such that for $S_i=\pi_S(X_i)$, each $X_i\subseteq S_i \times K$ can be expressed as
+\[X_i = \left\{(s,x) \in S_i \times K \ \left| \ \forall (c_1, \ldots c_{r_i}) \in (\Sigma_i)_s: \bigvee_{j=1}^{r_i} C_{\delta_{ij}}(x,c_j, \alpha_{ij}, \beta_{ij};s)\right\}\right.,\]
+where $r_i \in \N$, $\Sigma_i \subseteq S_i \times K^{r_i}$ is a definable set and $C_{\delta_{ij}}(x,y,\alpha_{ij},\beta_{ij},s)$ are $K$-cell conditions. The tuple $\{(X_i )_{i},(\Sigma_i)_{i}, (C_{\delta_{ij}})_{i,j}\}$,  will be called a $K$-cell decomposition of $X$. 
+\end{defn}
+
+The main difference between classical cell decomposition and $K$-cell decomposition arises at the level of centers. In the classical definition, the centers appear as the images of definable functions from the parameter set $S$. Instead, a $K$-cell decomposition contains for each $X_i$ a definable set $\Sigma_i$ containing all possible tuples of centers of a cell decomposition of $X_i$. This still allows us to see $X$ decomposed into cells: the difference being that their centers cannot be picked definably from the parameters. Since no centers are used for definable sets $X\subseteq S\times \Gamma_K$, we will get classical results in this case. 
+\\\\
+It is less obvious whether it is possible to find a definable center, i.e. whether one can choose an element from $\Sigma$ in a definable way. We will discuss some special cases below.
+
+We will need that to assume that the cardinality of the value group $\Gamma_K$ is strictly smaller than the cardinality of the valued field $K$. This is clearly true whenever $K$ is a $p$-adic fields, since $\Q_p$ has the same cardinality as $\R$.
+Let us now first make the following observation about definable functions.
+%{\color{red} Assumption: The value group of a p-adically closed field is always countable. A $\Z$-group is isomorphic to a direct sum $\Q^d$ with groups $\Q_p/\Z_p$, which are countable. So if there are only finitely many summands, the resulting group is certainly countable. Otherwise..?} 
+\begin{lem}\label{lem:constant} Assume that $|K| > |\Gamma_K|$.
+Let $f: D\subseteq \Gamma_K^l \to K$ be a definable function in a relatively $P$-minimal structure. Then $f$ is piecewise constant.
+\end{lem}
+\begin{proof} 
+Suppose not, in which case the image $f(D)$ will be an infinite set. Note that by relative $P$-minimality, the graph of $f$ will be $\Lringtwo$-definable, and hence its image is $\Lring$-definable. So by properties of semi-algebraic sets, the image $f(D)$ must contain an open ball. But this would mean we have a surjective map from the  set $D$ to an open ball, which is impossible since the cardinalities are different.
+\end{proof}
+\begin{lem} Assume that $|K| > |\Gamma_K|$.
+Let $X \subseteq \Gamma_K^l \times K$ be a definable set in a relatively $P$-minimal structure. Then there exists 
+a decomposition of $X$ in $K$-cells where the center $c$ of each cell is a constant from $K$.
+%\[\{(\gamma, t) \in D \times K \mid C_{\delta}(x,c,\alpha, \beta;\gamma)\},\]
+%where $D \subseteq \Gamma_K^l$, $\delta \in P_K$, $\alpha, \beta$ are $\Lm_{\text{Pres}}$-definable functions and the center $c$ is a constant from $K$.
+%$\left\{\{c_1, \ldots, c_r\}, C_1, \ldots, C_r\right\}.${\color{red} What is best notation to use here?}
+\end{lem}
+\begin{proof}
+By Theorem \ref{thm:partialprep}, there exists a $K$-cell decomposition $\{(X_i)_i,(\Sigma_i)_i, (C_{\delta_{ij}})_{i,j}\}$ of $X$. Put $D_i := \Pi_{\Gamma_K^l}(X_i)$, and write $\Sigma^{(1)}_i$ for the projection
+\[\Sigma_i^{(1)}:= \{(\gamma, y) \in \Gamma_K^l \times K \mid \exists y_2, \ldots, y_r \in K: (\gamma, y, y_2, \ldots, y_r) \in \Sigma_i\}.\]
+By relatively $P$-minimality and Proposition \ref{l=1}, the sets $\Sigma_i^{(1)} \subseteq \Gamma_K^l \times K$ are $\Lringtwo$-definable. But this means that the related sets
+\[\widetilde{\Sigma}_i^{(1)}:= \{(x,y) \in K^{l+1} \mid (\ord x_1, \ldots, \ord x_r, y) \in \Sigma_i^{(1)}\}\] are $\Lring$-definable.
+Hence, because the structure $(K,\Lring)$ has definable Skolem functions, one can find semi-algebraic maps $g_i:\Pi_{K^l}(\widetilde{\Sigma}_i^{(1)}) \to K$ such that $(x, g(x)) \in \widetilde{\Sigma}_i^{(1)}$ whenever $x \in \widetilde{\Sigma}_i^{(1)}$. From this one can deduce  maps
+$g_{i,\Gamma}: \Pi_{\Gamma_K^l}(\Sigma_i^{(1)})\to K$ defined as
+\[g_{i,\Gamma}(\gamma) = x \Leftrightarrow (\exists y_1, \ldots, y_l)(\ord y_i = \gamma_i \wedge g_i(y) =x).\]
+This implies that there exists a cell decomposition of $X_i$ such that the first cell $C_{i1}$ in the decomposition has the form
+\[\{(\gamma, t) \in D_i \times K \mid C_{\delta_{i1}}(t, g_{i,\Gamma}(\gamma), \alpha_{i1}, \beta_{i1};\gamma)\}.\]
+Note that by Lemma \ref{lem:constant}, the functions $g_{i,\Gamma}$ are piecewise constant. Hence, after partitioning $D_i$ we may as well assume that $g_{i,\Gamma}$ is the constant map $g_{i,\Gamma}(\gamma) = c_{i1}$, for some $c_{i1} \in K$.
+We can now apply the same procedure to the sets 
+\[\Sigma_i^{(2)}:= \{(\gamma, y) \in \Gamma_K^l \times K \mid \exists y_3, \ldots, y_r \in K: (\gamma, c_1 y, y_2, \ldots, y_r) \in \Sigma_i\}.\]
+Iterating this, we obtain a cell decomposition for $A$ where the center of each cell is a constant. 
+\end{proof}
+{\color{blue} Question: how far can this argument be extended? Could it be concluded that after the right partitioning, the choice of center will only depend on the $K$-variables?}
+
+%In this case we are able to definably choose the centers because we are considering a special case. In the semi-algebraic and sub-analytic case, definable Skolem functions are used to choose centers from $\Sigma$. However, it is unknown whether a general (relatively) $P$-minimal structure admits definable Skolem functions. Here we will use a somewhat weaker assumption to obtain a cell decomposition theorem where the cells are more independent entities than in Theorem-Definition \ref{def:celdecB}.
+%
+%\begin{defn}[definable Skolem relations]
+%Let $A \subseteq D \times K$ be an $\Lm_2$-definable set, where $D \subseteq K^{r_1} \times \Gamma_K^{r_2}$. Then the set $\mathcal{S}(A)\subseteq D \times \Gamma_K\times K$, consisting of elements $(d,\gamma,t)$, is a definable Skolem relation on $A$, if $\cS(A)$ is a definable set, and
+%\begin{itemize}
+%\item If the fiber $A_d$ is finite, then the fiber $\cS(A)_{d,\gamma}$ is a singleton $\{t_0\}$ (independent of $\gamma$), such that $(d, t_0) \in A$.
+%\item If the fiber $A_d$ is infinite, then:
+%\begin{itemize}
+%\item If $A_d$ contains balls with radius $\gamma$, then the fiber $\cS(A)_{d,\gamma}$ is a ball $B_\gamma$ with radius $\gamma$, such that $(d,B_{\gamma}) \subset A$. 
+%\item If $A_d$ does not contain any balls with radius $\gamma$ then the fiber $\cS(A)_{d,\gamma}$ is a ball $B_0$ (indep. of $\gamma$) with maximal volume (so with minimal possible radius), such that $(d,B_0) \subset A$.
+%\end{itemize}
+%\end{itemize}
+%{\color{red} Or make it simpler and just always pick a ball with maximal possible volume?}   
+%\end{defn}
+%Does such a relation $\mathcal{S}(A)$ always exist? Whenever the fiber $A_d$ is finite, it is always possible to definably choose an element $t_0 \in K$ such that $(d,t_0) \in A$, see eg. Denef \cite{denef-84}, Lemma 7.1. When the fibers are infinite, it is not known whether one can always choose a ball in a definable way, but clearly it is a weaker condition than classical Skolem functions. {\color{red} to do: give an example where Skolem functions do not exist, but definable Skolem relations do.}
+%\begin{thm}
+% Let $(K, \Gamma_K)$ be a {\color{red}(relatively)} $P$-minimal structure with definable Skolem relations. Let $A \subseteq D \times K$ be a definable set. Then $A$ can be partitioned into a finite union of cells of the form
+%\end{thm}
+%\begin{proof}
+%By Theorem \ref{def:celdecB}, there exists a decomposition $(\Sigma, C_1, \ldots, C_r)$ of $A$. Write $\Sigma_1$ for the projection
+%\[\Sigma_1:= \{(d, y) \in d \times K \mid \exists y_2, \ldots, y_r \in K: (d, y, y_2, \ldots, y_r) \in \Sigma\}.\]
+%Let $C_1$ be the set
+%$C_1= \{(d,y,t) \in D_1 \times K \mid C_{\delta_1}(t,y, \alpha_1(x), \beta_1(x))\}$.
+%We will first partition $C_1$ as $C_{1,1} \cup C_{1,2}$, where
+%\end{proof}
